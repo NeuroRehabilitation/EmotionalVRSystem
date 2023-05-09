@@ -124,11 +124,11 @@ public class MeshGenerator : MonoBehaviour
     public void PlacePathBeginning()
     {
         GameObject ScoutPlaced;
-        ScoutPlaced = Instantiate (Scout, new Vector3(500, 150, 500), Quaternion.identity);
+        ScoutPlaced = Instantiate (Scout, new Vector3(1150, 150, 1150), Quaternion.identity);
 
-        for (int x=500;x>-200;x--)
+        for (int x=1150;x>-200;x--)
         {
-            for (int z=500;z>-200;z--)
+            for (int z=1150;z>-200;z--)
             {
                 ScoutPlaced.transform.position = new Vector3(x,150f,z);
                 ScoutPlaced.GetComponent<ScoutTerrain>().checkIsInWater();
@@ -155,9 +155,9 @@ public class MeshGenerator : MonoBehaviour
         GameObject ScoutPlaced;
         ScoutPlaced = Instantiate (Scout, new Vector3(-200, 150, -200), Quaternion.identity);
 
-        for (int x=-200;x<500;x++)
+        for (int x=-200;x<1150;x++)
         {
-            for (int z=-200;z<500;z++)
+            for (int z=-200;z<1150;z++)
             {
                 ScoutPlaced.transform.position = new Vector3(x,150f,z);
                 ScoutPlaced.GetComponent<ScoutTerrain>().checkIsInWater();

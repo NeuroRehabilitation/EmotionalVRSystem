@@ -33,7 +33,6 @@ public class PathCreator : MonoBehaviour
     public bool finished = false;
     public float TimeT;
     public float TimeTotal;
-    private float anchorTimer = 0f;
     public GameObject Anchor;
     public Transform AnchorsParent;
     private float AngleBetweenPathmakerPositions;
@@ -161,7 +160,6 @@ public class PathCreator : MonoBehaviour
     private void UpdatePath()
     {
         TimeT += Time.deltaTime;
-        anchorTimer += Time.deltaTime;
         var randomRotation = GetRandomRotation();
 
         UpdateLineRenderer();
@@ -224,12 +222,6 @@ public class PathCreator : MonoBehaviour
     {
         int randm = Random.Range(0, 41);
 
-        // Instantiate anchor every 2 seconds
-        /*if (anchorTimer >= 2f)
-        {
-            Instantiate(anchor, transform.position, Quaternion.Euler(new Vector3(0, -AngleBetweenPathmakerPositions, 0)));
-            anchorTimer = 0f;
-        }*/
         if (randm <= 30)
         {
             bool isPositive = randm <= 15;
