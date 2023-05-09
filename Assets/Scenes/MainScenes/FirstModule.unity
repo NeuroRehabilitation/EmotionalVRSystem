@@ -2954,7 +2954,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1624410982}
   m_OriginBaseGameObject: {fileID: 1012857039}
   m_CameraFloorOffsetObject: {fileID: 477573727}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 1.1176
 --- !u!4 &1012857042
 Transform:
@@ -2984,7 +2984,7 @@ GameObject:
   - component: {fileID: 1167243502}
   - component: {fileID: 1167243505}
   - component: {fileID: 1167243504}
-  - component: {fileID: 1167243503}
+  - component: {fileID: 1167243506}
   m_Layer: 0
   m_Name: Locomotion System
   m_TagString: Untagged
@@ -3007,48 +3007,6 @@ Transform:
   m_Father: {fileID: 1012857042}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1167243503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167243501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2213c36610e3b1c4bbf886810ed9db12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 1167243505}
-  m_TurnAmount: 45
-  m_DebounceTime: 0.5
-  m_EnableTurnLeftRight: 1
-  m_EnableTurnAround: 1
-  m_DelayTime: 0
-  m_LeftHandSnapTurnAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Left Hand Snap Turn
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 1f5ef14b-833a-49b2-9add-179e78eb2718
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_RightHandSnapTurnAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Right Hand Snap Turn
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 7cbd2b29-c3e3-4d53-838d-5d1a9e5469a4
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
 --- !u!114 &1167243504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3077,6 +3035,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XROrigin: {fileID: 1012857041}
+--- !u!114 &1167243506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167243501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 0}
+  m_TurnSpeed: 60
+  m_LeftHandTurnAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Left Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: bfd92b26-6ac6-45b3-a8a8-1df561c13a7a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_RightHandTurnAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 85805474-02e4-4686-9897-d1de9e2a4154
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &1200666880 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6347984961915090732, guid: f9f8d429fdc3e7f4fbb93b9749ad5a3c, type: 3}
@@ -4128,7 +4124,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   m_TreatSelectionAsValidState: 0
-  m_SmoothMovement: 0
+  m_SmoothMovement: 1
   m_FollowTightness: 10
   m_SnapThresholdDistance: 10
   m_Reticle: {fileID: 8745113593698698764, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
@@ -4259,7 +4255,7 @@ MonoBehaviour:
   m_InteractionLayers:
     m_Bits: 2
   m_AttachTransform: {fileID: 0}
-  m_KeepSelectedTargetValid: 1
+  m_KeepSelectedTargetValid: 0
   m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
@@ -4330,7 +4326,7 @@ MonoBehaviour:
   m_MaxRaycastDistance: 30
   m_RayOriginTransform: {fileID: 0}
   m_ReferenceFrame: {fileID: 0}
-  m_Velocity: 10
+  m_Velocity: 16
   m_Acceleration: 9.8
   m_AdditionalGroundHeight: 0.1
   m_AdditionalFlightTime: 0.5
@@ -4346,7 +4342,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
   m_RaycastSnapVolumeInteraction: 1
-  m_HitClosestOnly: 0
+  m_HitClosestOnly: 1
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
   m_AutoDeselect: 0
@@ -5025,7 +5021,7 @@ MonoBehaviour:
   finished: 0
   TimeT: 0
   TimeTotal: 0
-  Anchor: {fileID: 3842566525335479828, guid: 9b51befb1344e364e88fd5ad96ac2f46, type: 3}
+  Anchor: {fileID: 3776566555272519623, guid: 9b51befb1344e364e88fd5ad96ac2f46, type: 3}
   AnchorsParent: {fileID: 741481285}
   counterTest: 0
 --- !u!195 &1738939506
@@ -5797,64 +5793,3 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111714599}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &6687260893191311188
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2974419475208291285, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2974419475208291285, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.6482544
-      objectReference: {fileID: 0}
-    - target: {fileID: 2974419475208291285, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 71.69639
-      objectReference: {fileID: 0}
-    - target: {fileID: 2974419475208291285, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 269.198
-      objectReference: {fileID: 0}
-    - target: {fileID: 2974419475208291285, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2974419475208291285, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2974419475208291285, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2974419475208291285, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2974419475208291285, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2974419475208291285, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2974419475208291285, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8745113593698698764, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
-      propertyPath: m_Name
-      value: Cylinder
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
