@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.006
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0, g: 0.13303484, b: 0.3018868, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0.26606968, b: 0.6037736, a: 1}
   m_AmbientEquatorColor: {r: 0.5752189, g: 0.6132076, b: 0.43676576, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1.14
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 4468cf691a0d9e74183ca9beb3c7c990, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1457,7 +1457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477573727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1176, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1572,6 +1572,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 359892609}
     m_Modifications:
+    - target: {fileID: 1791245657837975978, guid: 4eead59d2ca69554e9356d924e52cd51, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3926237102471004432, guid: 4eead59d2ca69554e9356d924e52cd51, type: 3}
       propertyPath: m_Layer
       value: 15
@@ -1674,7 +1678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7604444231708657044, guid: 4eead59d2ca69554e9356d924e52cd51, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7604444231708657044, guid: 4eead59d2ca69554e9356d924e52cd51, type: 3}
       propertyPath: m_TagString
@@ -2954,8 +2958,8 @@ MonoBehaviour:
   m_Camera: {fileID: 1624410982}
   m_OriginBaseGameObject: {fileID: 1012857039}
   m_CameraFloorOffsetObject: {fileID: 477573727}
-  m_RequestedTrackingOriginMode: 2
-  m_CameraYOffset: 1.1176
+  m_RequestedTrackingOriginMode: 0
+  m_CameraYOffset: 1.5
 --- !u!4 &1012857042
 Transform:
   m_ObjectHideFlags: 0
@@ -3119,9 +3123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   XMin: -300
-  XMax: 500
+  XMax: 1150
   ZMin: -200
-  ZMax: 550
+  ZMax: 1150
   SpawnHeight: 115
   parent: {fileID: 1269797001}
   tree:
@@ -3130,7 +3134,7 @@ MonoBehaviour:
   - {fileID: 7291038580486291444, guid: a96ec426591c1a74b90aa643726f600d, type: 3}
   - {fileID: 2415146313088293920, guid: 0a04c12ab37b34b45bac5513fe3bf44a, type: 3}
   placedGrass: []
-  numObjectsToSpawn: 80000
+  numObjectsToSpawn: 15000
 --- !u!114 &1242147619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3157,7 +3161,7 @@ MonoBehaviour:
   - 0.35
   - 1.19
   placedTrees: []
-  numObjectsToSpawn: 2000
+  numObjectsToSpawn: 7000
   destroy: 1
   m_TextComponent: {fileID: 0}
 --- !u!4 &1242147622
@@ -3169,7 +3173,7 @@ Transform:
   m_GameObject: {fileID: 1242147617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -309, y: -27.9, z: -114}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 359892609}
@@ -5037,7 +5041,7 @@ NavMeshAgent:
   m_Speed: 40
   m_Acceleration: 100
   avoidancePriority: 50
-  m_AngularSpeed: 1
+  m_AngularSpeed: 50
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0

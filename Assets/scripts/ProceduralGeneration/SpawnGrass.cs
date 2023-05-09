@@ -6,9 +6,9 @@ using TMPro;
 public class SpawnGrass : MonoBehaviour
 {
     public float XMin = -300.0f;
-    public float XMax = 500.0f;
+    public float XMax = 1150.0f;
     public float ZMin = -200.0f;
-    public float ZMax = 550.0f;
+    public float ZMax = 1150.0f;
     public float SpawnHeight = 115.0f;
     public GameObject parent;
     public GameObject[] tree;
