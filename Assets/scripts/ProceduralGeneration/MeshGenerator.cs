@@ -124,9 +124,9 @@ public class MeshGenerator : MonoBehaviour
     public void PlacePathBeginning()
     {
         GameObject ScoutPlaced;
-        ScoutPlaced = Instantiate (Scout, new Vector3(1150, 150, 1150), Quaternion.identity);
+        ScoutPlaced = Instantiate (Scout, new Vector3(-130, 150, 1150), Quaternion.identity);
 
-        for (int x=1150;x>-200;x--)
+        for (int x=-130;x>-200;x--)
         {
             for (int z=1150;z>-200;z--)
             {

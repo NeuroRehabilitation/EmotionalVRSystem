@@ -9,6 +9,9 @@ public class PathCreator : MonoBehaviour
 
     [Header("General fields")]
     public GameObject finalDoor;
+    public GameObject Anchor;
+    public Transform AnchorsParent;
+
 
     //public GameObject anchor;
 
@@ -23,9 +26,11 @@ public class PathCreator : MonoBehaviour
     public GameObject grass;
     public GameObject rock;
     public GameObject bush;
+    public GameObject fire;
     public GameObject grassParent;
     public GameObject rockParent;
     public GameObject bushParent;
+    public GameObject fireParent;
 
     [Header("State and timing variables")]
     public int x = 0;
@@ -33,8 +38,6 @@ public class PathCreator : MonoBehaviour
     public bool finished = false;
     public float TimeT;
     public float TimeTotal;
-    public GameObject Anchor;
-    public Transform AnchorsParent;
     private float AngleBetweenPathmakerPositions;
 
 
@@ -130,7 +133,7 @@ public class PathCreator : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("PlaceAnchor", 0, 0.5f); //calls PlaceAnchor() every 0.5 sec
+        InvokeRepeating("PlaceAnchor", 0, 0.2f); //calls PlaceAnchor() every 0.2 sec
     }
     
 
@@ -226,6 +229,7 @@ public class PathCreator : MonoBehaviour
         {
             bool isPositive = randm <= 15;
             Instantiate(grass, CalculateNewPosition(isPositive, AngleBetweenPathmakerPositions, 8.0f, 8.5f), randomRotation, grassParent.transform);
+
         }
         else if (randm >= 37)
         {
