@@ -37,8 +37,8 @@ IEnumerator StartSpawning()
     float spawnPointZ = 0f;
     placedTrees = new GameObject[numObjectsToSpawn];
     float pocketThreshold = 0.5f; // Adjust this value to control density
-float offsetX = Random.Range(-1000f, 1000f);
-float offsetZ = Random.Range(-1000f, 1000f);
+    float offsetX = Random.Range(-1000f, 1000f);
+    float offsetZ = Random.Range(-1000f, 1000f);
     for (int i = 0; i < numObjectsToSpawn; i++)
     {
         spawnPointX = Random.Range(-300.0f + (255 * transform.GetComponent<MeshGenerator>().tileX), 1250.0f + (255 * transform.GetComponent<MeshGenerator>().tileX));
