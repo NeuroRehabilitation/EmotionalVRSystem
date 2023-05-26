@@ -26,11 +26,9 @@ public class PathCreator : MonoBehaviour
     public GameObject grass;
     public GameObject rock;
     public GameObject bush;
-    public GameObject fire;
     public GameObject grassParent;
     public GameObject rockParent;
     public GameObject bushParent;
-    public GameObject fireParent;
 
     [Header("State and timing variables")]
     public int x = 0;
