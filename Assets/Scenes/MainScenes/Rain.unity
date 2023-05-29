@@ -3254,8 +3254,8 @@ MonoBehaviour:
   - {fileID: 184848384070053195, guid: 2fd223904192ac54291449108f65fd1f, type: 3}
   - {fileID: 5142532879768883847, guid: 5983c8a04c0e73047a6c860b9cd9aaad, type: 3}
   - {fileID: 1276862051916332, guid: 1be61187b5d765449be824463642cb0f, type: 3}
-  - {fileID: 7488298240707488550, guid: 0830e65b246cde043b3773a9c2c2abb8, type: 3}
-  - {fileID: 7488298240707488550, guid: 0830e65b246cde043b3773a9c2c2abb8, type: 3}
+  - {fileID: 8610374479441392947, guid: a7e4c2eedff077247ad65a93ad964dad, type: 3}
+  - {fileID: 8610374479441392947, guid: a7e4c2eedff077247ad65a93ad964dad, type: 3}
   treeScale:
   - 0
   - 0
@@ -3263,7 +3263,7 @@ MonoBehaviour:
   - 0.35
   - 1.19
   placedTrees: []
-  numObjectsToSpawn: 15000
+  numObjectsToSpawn: 20000
   destroy: 1
   m_TextComponent: {fileID: 0}
 --- !u!4 &1242147622
@@ -3301,7 +3301,7 @@ MonoBehaviour:
   Height: 20
   offSetX: 5
   offSetZ: 5
-  seed: 101
+  seed: 700
   Bridges: []
   Scout: {fileID: 1542619041}
   PathDestination: {fileID: 277558983}

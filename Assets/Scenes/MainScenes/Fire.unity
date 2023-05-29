@@ -3200,7 +3200,7 @@ MonoBehaviour:
   Height: 20
   offSetX: 5
   offSetZ: 5
-  seed: 101
+  seed: 20
   Bridges: []
   Scout: {fileID: 1542619041}
   PathDestination: {fileID: 277558983}
