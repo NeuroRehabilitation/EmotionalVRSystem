@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 492388}
   - component: {fileID: 3356732}
   - component: {fileID: 2308342}
+  - component: {fileID: 2975519331213429793}
   m_Layer: 0
   m_Name: Flower-2-Red
-  m_TagString: Untagged
+  m_TagString: grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2975519331213429793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186884}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.47457898, y: 0.583842, z: 0.43754566}
+  m_Center: {x: 0.2290631, y: 0.29521665, z: -0.068479486}

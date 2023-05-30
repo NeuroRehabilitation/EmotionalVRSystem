@@ -37,12 +37,12 @@ IEnumerator StartSpawning()
     float spawnPointZ = 0f;
     placedTrees = new GameObject[numObjectsToSpawn];
     float pocketThreshold = 0.5f; // Adjust this value to control density
-    float offsetX = Random.Range(-1000f, 1000f);
-    float offsetZ = Random.Range(-1000f, 1000f);
+    float offsetX = Random.Range(-1300f, 1300f);
+    float offsetZ = Random.Range(-1300f, 1300f);
     for (int i = 0; i < numObjectsToSpawn; i++)
     {
-        spawnPointX = Random.Range(-300.0f + (255 * transform.GetComponent<MeshGenerator>().tileX), 1250.0f + (255 * transform.GetComponent<MeshGenerator>().tileX));
-        spawnPointZ = Random.Range(-200.0f + (255 * transform.GetComponent<MeshGenerator>().tileZ), 1250.0f + (255 * transform.GetComponent<MeshGenerator>().tileZ));
+        spawnPointX = Random.Range(-300.0f + (255 * transform.GetComponent<MeshGenerator>().tileX), 1300.0f + (255 * transform.GetComponent<MeshGenerator>().tileX));
+        spawnPointZ = Random.Range(-200.0f + (255 * transform.GetComponent<MeshGenerator>().tileZ), 1300.0f + (255 * transform.GetComponent<MeshGenerator>().tileZ));
         Vector3 spawnPosition = new Vector3(spawnPointX, 115, spawnPointZ);
 
         // Use Perlin noise to create pockets
