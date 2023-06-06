@@ -47,6 +47,7 @@ public class MeshGenerator : MonoBehaviour
     [Header("Path and Helpers")]
     public GameObject Scout;
     public GameObject PathDestination;
+    public Transform[] waypoints;
     public GameObject PathMaker;
     public GameObject Finish;
     public bool isStatic=false;
@@ -115,7 +116,7 @@ public class MeshGenerator : MonoBehaviour
     {
         PlacePathBeginning();
         StartCoroutine(WaitMainPath());
-        PlacePathEnd();
+        //PlacePathEnd();
         transform.parent.transform.parent.gameObject.GetComponent<NavigationBaker>().buildNavMesh();
     }
 
@@ -126,9 +127,9 @@ public class MeshGenerator : MonoBehaviour
         GameObject ScoutPlaced;
         ScoutPlaced = Instantiate (Scout, new Vector3(-130, 150, 1250), Quaternion.identity);
 
-        for (int x=-130;x>-200;x--)
+        for (int x=-175;x>-200;x--)
         {
-            for (int z=1250;z>-200;z--)
+            for (int z=-175;z>-200;z--)
             {
                 ScoutPlaced.transform.position = new Vector3(x,150f,z);
                 ScoutPlaced.GetComponent<ScoutTerrain>().checkIsInWater();
@@ -142,6 +143,7 @@ public class MeshGenerator : MonoBehaviour
         }
          return;
     }
+
     
     IEnumerator WaitMainPath()
     {
