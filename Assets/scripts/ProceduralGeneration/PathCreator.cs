@@ -59,10 +59,11 @@ public class PathCreator : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Waypoint"))
         {
-            Debug.Log("Collision");
-            if (currentWaypoint < waypoints.Length)
+            Debug.Log(waypoints.Length);
+            if (currentWaypoint < waypoints.Length-1)
             {
-                myNavMeshAgent.SetDestination(waypoints[++currentWaypoint].position);
+                currentWaypoint++;
+                myNavMeshAgent.SetDestination(waypoints[currentWaypoint].position);
                 
             }
         }
@@ -131,7 +132,7 @@ public class PathCreator : MonoBehaviour
 
     private void SpawnFinalDoor()
     {
-        GameObject finalDoorTemp = Instantiate(finalDoor, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+        GameObject finalDoorTemp = Instantiate(finalDoor, waypoints[currentWaypoint].position, transform.rotation);
         finalDoorTemp.GetComponent<DoorColliderDetection>().SpawnPos = new Vector3(-50f, 15f, -35f);
     }
 
@@ -140,7 +141,7 @@ public class PathCreator : MonoBehaviour
     {
         // Update the total time elapsed
         UpdateTime();
-        Debug.Log("Has Path = " + myNavMeshAgent.hasPath);
+        //Debug.Log("Has Path = " + myNavMeshAgent.hasPath);
        
      
         // Check if the agent should draw the path and update accordingly
