@@ -46,7 +46,7 @@ public class MeshGenerator : MonoBehaviour
 
     [Header("Path and Helpers")]
     public GameObject Scout;
-    public GameObject PathDestination;
+    public Transform PathDestination;
     public GameObject PathMaker;
     public GameObject Finish;
     public bool isStatic=false;
@@ -115,7 +115,7 @@ public class MeshGenerator : MonoBehaviour
     {
         PlacePathBeginning();
         //StartCoroutine(WaitMainPath());
-        //PlacePathEnd();
+        PlacePathEnd();
         transform.parent.transform.parent.gameObject.GetComponent<NavigationBaker>().buildNavMesh();
     }
 
@@ -152,25 +152,18 @@ public class MeshGenerator : MonoBehaviour
     // if he finds terrain, place marker there.
     public void PlacePathEnd()
     {
-        GameObject ScoutPlaced;
-        ScoutPlaced = Instantiate (Scout, new Vector3(-200, 150, -200), Quaternion.identity);
-
-        for (int x=-200;x<1150;x++)
-        {
-            for (int z=-200;z<1150;z++)
+            GameObject ScoutPlaced;
+            ScoutPlaced = Instantiate (Scout, new Vector3(-200, 150, -200), Quaternion.identity);
+            ScoutPlaced.transform.position = new Vector3(PathDestination.position.x,150f,PathDestination.position.z);
+            ScoutPlaced.GetComponent<ScoutTerrain>().checkIsInWater();
+            if (ScoutPlaced.GetComponent<ScoutTerrain>().isInWater == false)
             {
-                ScoutPlaced.transform.position = new Vector3(x,150f,z);
-                ScoutPlaced.GetComponent<ScoutTerrain>().checkIsInWater();
-                if (ScoutPlaced.GetComponent<ScoutTerrain>().isInWater == false)
-                {
-                    PathDestination.transform.position = new Vector3(x, ScoutPlaced.GetComponent<ScoutTerrain>().yPos, z);
-                    Instantiate (Finish,new Vector3(x, ScoutPlaced.GetComponent<ScoutTerrain>().yPos, z), Quaternion.identity);
-                    
-                    return;
-                }
+                //PathDestination.transform.position = new Vector3(x, ScoutPlaced.GetComponent<ScoutTerrain>().yPos, z);
+                Instantiate (Finish,new Vector3(PathDestination.position.x, ScoutPlaced.GetComponent<ScoutTerrain>().yPos, PathDestination.position.z), Quaternion.identity);
+
+                return;
             }
-        }
-         return;
+        return;
     }
 
     // look for a suitable place to place the bridge
