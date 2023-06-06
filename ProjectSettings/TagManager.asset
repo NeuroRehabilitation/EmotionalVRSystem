@@ -8,6 +8,7 @@ TagManager:
   - water
   - grass
   - FinishPrimary
+  - Waypoint
   layers:
   - Default
   - TransparentFX

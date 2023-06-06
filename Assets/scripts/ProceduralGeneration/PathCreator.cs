@@ -21,6 +21,8 @@ public class PathCreator : MonoBehaviour
     public Vector3 pointPositionLate;
     public NavMeshAgent myNavMeshAgent;
     public GameObject destination;
+    public Transform[] waypoints;
+    public int currentWaypoint = 0;
 
     [Header("Milestones and environment objects")]
     public GameObject grass;
@@ -51,6 +53,15 @@ public class PathCreator : MonoBehaviour
         {
             OnFinishPrimary(collision);
         }
+
+        if(collision.gameObject.CompareTag("Waypoint"))
+        {
+            if(currentWaypoint <= waypoints.Length)
+            {
+                currentWaypoint++;
+                Debug.Log("Collision");
+            }
+        }
     }
 
     private void OnFinishPrimary(Collision collision)
@@ -63,7 +74,8 @@ public class PathCreator : MonoBehaviour
 
     public void DrawPath()
     {
-        myNavMeshAgent.SetDestination(destination.transform.position);
+        myNavMeshAgent.SetDestination(waypoints[currentWaypoint].position);
+
         if (myNavMeshAgent.path.corners.Length < 2)
         {
             return;
@@ -121,10 +133,13 @@ public class PathCreator : MonoBehaviour
     {
         // Update the total time elapsed
         UpdateTime();
-
+        Debug.Log("Has Path = " + myNavMeshAgent.hasPath);
+       
+     
         // Check if the agent should draw the path and update accordingly
         if (ShouldDrawPath())
         {
+            
             UpdatePath();
         }
     }
@@ -132,6 +147,7 @@ public class PathCreator : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("PlaceAnchor", 0, 0.2f); //calls PlaceAnchor() every 0.2 sec
+
     }
     
 
@@ -163,7 +179,7 @@ public class PathCreator : MonoBehaviour
         TimeT += Time.deltaTime;
         var randomRotation = GetRandomRotation();
 
-        UpdateLineRenderer();
+        DrawPath();
         float AngleBetweenPathmakerPositions = UpdateAgentPosition();
 
         // Instantiate environment objects along the path
@@ -176,11 +192,6 @@ public class PathCreator : MonoBehaviour
         return Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0));
     }
 
-    // Update the line renderer to account for the agent's new position
-    private void UpdateLineRenderer()
-    {
-        DrawPath();
-    }
 
     // Update the agent's position and calculate the angle between its current and previous position
     private float UpdateAgentPosition()
