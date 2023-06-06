@@ -53,13 +53,17 @@ public class PathCreator : MonoBehaviour
         {
             OnFinishPrimary(collision);
         }
+    }
 
-        if(collision.gameObject.CompareTag("Waypoint"))
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Waypoint"))
         {
-            if(currentWaypoint <= waypoints.Length)
+            Debug.Log("Collision");
+            if (currentWaypoint < waypoints.Length)
             {
-                currentWaypoint++;
-                Debug.Log("Collision");
+                myNavMeshAgent.SetDestination(waypoints[++currentWaypoint].position);
+                
             }
         }
     }
@@ -74,7 +78,10 @@ public class PathCreator : MonoBehaviour
 
     public void DrawPath()
     {
-        myNavMeshAgent.SetDestination(waypoints[currentWaypoint].position);
+        if (!myNavMeshAgent.hasPath)
+        {
+            myNavMeshAgent.SetDestination(waypoints[currentWaypoint].position);
+        }
 
         if (myNavMeshAgent.path.corners.Length < 2)
         {

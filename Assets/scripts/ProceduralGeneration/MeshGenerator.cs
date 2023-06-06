@@ -47,7 +47,6 @@ public class MeshGenerator : MonoBehaviour
     [Header("Path and Helpers")]
     public GameObject Scout;
     public GameObject PathDestination;
-    public Transform[] waypoints;
     public GameObject PathMaker;
     public GameObject Finish;
     public bool isStatic=false;
@@ -115,7 +114,7 @@ public class MeshGenerator : MonoBehaviour
     public void FitaCola()
     {
         PlacePathBeginning();
-        StartCoroutine(WaitMainPath());
+        //StartCoroutine(WaitMainPath());
         //PlacePathEnd();
         transform.parent.transform.parent.gameObject.GetComponent<NavigationBaker>().buildNavMesh();
     }
@@ -143,7 +142,6 @@ public class MeshGenerator : MonoBehaviour
         }
          return;
     }
-
     
     IEnumerator WaitMainPath()
     {
