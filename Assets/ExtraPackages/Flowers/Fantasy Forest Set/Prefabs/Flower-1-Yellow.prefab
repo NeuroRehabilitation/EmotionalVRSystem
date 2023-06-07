@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3315972}
   - component: {fileID: 2329994}
   - component: {fileID: 9136189817242673689}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flower-1-Yellow
   m_TagString: grass
   m_Icon: {fileID: 0}

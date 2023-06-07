@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass2d (1) 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7556377935293913469, guid: 7bd45dbb85bd20b45b3fda451db76285, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 850717698980665853, guid: 7bd45dbb85bd20b45b3fda451db76285, type: 3}

@@ -62,7 +62,8 @@ public class MeshGenerator : MonoBehaviour
         // Spawn bridges
         SpawnRaycasts();
         // Ducktape where I spawn grass and place markers for the pathmaker agent
-        StartCoroutine(putGrass());
+        //StartCoroutine(putGrass());
+        FitaCola();
     }
 
     public void UpdateMap()
