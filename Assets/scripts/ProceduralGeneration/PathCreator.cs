@@ -59,7 +59,6 @@ public class PathCreator : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Waypoint"))
         {
-            Debug.Log(waypoints.Length);
             if (currentWaypoint < waypoints.Length-1)
             {
                 currentWaypoint++;
