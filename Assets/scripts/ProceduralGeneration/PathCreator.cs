@@ -190,7 +190,7 @@ public class PathCreator : MonoBehaviour
         float AngleBetweenPathmakerPositions = UpdateAgentPosition();
 
         // Instantiate environment objects along the path
-        PlaceEnvironmentObjects(randomRotation, AngleBetweenPathmakerPositions);
+       //PlaceEnvironmentObjects(randomRotation, AngleBetweenPathmakerPositions);
     }
 
     // Generate a random rotation for instantiated objects
