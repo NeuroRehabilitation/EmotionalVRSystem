@@ -42,7 +42,7 @@ public class PathCreator : MonoBehaviour
 
 
     // Destroy grass objects upon collision to keep the path clear
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("grass"))
         {
@@ -53,7 +53,7 @@ public class PathCreator : MonoBehaviour
         {
             OnFinishPrimary(collision);
         }
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
@@ -66,9 +66,19 @@ public class PathCreator : MonoBehaviour
                 
             }
         }
+
+        if (other.gameObject.CompareTag("grass"))
+        {
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("FinishPrimary"))
+        {
+            OnFinishPrimary(other);
+        }
     }
 
-    private void OnFinishPrimary(Collision collision)
+    private void OnFinishPrimary(Collider collision)
     {
         finished = true;
         Destroy(collision.gameObject);
@@ -190,7 +200,7 @@ public class PathCreator : MonoBehaviour
         float AngleBetweenPathmakerPositions = UpdateAgentPosition();
 
         // Instantiate environment objects along the path
-       //PlaceEnvironmentObjects(randomRotation, AngleBetweenPathmakerPositions);
+        PlaceEnvironmentObjects(randomRotation, AngleBetweenPathmakerPositions);
     }
 
     // Generate a random rotation for instantiated objects

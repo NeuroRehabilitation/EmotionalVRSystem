@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4309896202306533643, guid: 7bd45dbb85bd20b45b3fda451db76285, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4315165430381223245, guid: 7bd45dbb85bd20b45b3fda451db76285, type: 3}
       propertyPath: m_Name
@@ -62,14 +62,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315165430381223245, guid: 7bd45dbb85bd20b45b3fda451db76285, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5591442311259348486, guid: 7bd45dbb85bd20b45b3fda451db76285, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5591442311259348486, guid: 7bd45dbb85bd20b45b3fda451db76285, type: 3}
       propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5591442311259348486, guid: 7bd45dbb85bd20b45b3fda451db76285, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7556377935293913469, guid: 7bd45dbb85bd20b45b3fda451db76285, type: 3}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5736985712304509186}
   - component: {fileID: 8869343520754067743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (15)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1009405426881809389}
   - component: {fileID: 831304459807650933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (6)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3955238293623466107}
   - component: {fileID: 54868138103593399}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (18)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7147442851302331570}
   - component: {fileID: 7339715850477699528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (2)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6682151762710317818}
   - component: {fileID: 2388907129330784801}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (12)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6967744807911173446}
   - component: {fileID: 3595908129036288726}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (7)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7621557695449758312}
   - component: {fileID: 2463887601455292849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (3)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 53580756008829497}
   - component: {fileID: 8514023755285613269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (16)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -434,7 +434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826340863873156833}
   - component: {fileID: 3144865223584016431}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (10)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000765653328702703}
   - component: {fileID: 5779090471918570268}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (9)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -539,7 +539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3478923287916960012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path500
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8633684625009981185}
   - component: {fileID: 1539980554074295285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (5)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7057432676445201298}
   - component: {fileID: 8479775965165413697}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (20)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -698,7 +698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6488391964487402173}
   - component: {fileID: 4207941975571912234}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (14)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -751,7 +751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4356997051989721367}
   - component: {fileID: 6421805108373797301}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (4)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -804,7 +804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3557243902240356771}
   - component: {fileID: 1482934445924843309}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (19)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -857,7 +857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3028813874413554577}
   - component: {fileID: 584767940658275693}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (8)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -910,7 +910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 189696333992879925}
   - component: {fileID: 7704618339750888365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (1)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -963,7 +963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5510452648943679351}
   - component: {fileID: 3994985414657335259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -1016,7 +1016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3769343635015019535}
   - component: {fileID: 3024317647089708468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (11)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -1069,7 +1069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4441948380352767792}
   - component: {fileID: 6449767508052906673}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (17)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
@@ -1122,7 +1122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8128826965427523476}
   - component: {fileID: 481617692050482845}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waipont (13)
   m_TagString: Waypoint
   m_Icon: {fileID: 0}
