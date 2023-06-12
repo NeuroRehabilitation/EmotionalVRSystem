@@ -36,7 +36,7 @@ Transform:
   - {fileID: 5250820072828945717}
   - {fileID: 5436402807111639127}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!205 &7681655795721147915
 LODGroup:

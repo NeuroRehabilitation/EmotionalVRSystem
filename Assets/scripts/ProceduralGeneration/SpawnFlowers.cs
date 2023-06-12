@@ -12,6 +12,8 @@ public class SpawnFlowers : MonoBehaviour
     public int numObjectsToSpawn = 0;
     public bool destroy = true;
     public TMP_Text m_TextComponent;
+    public LayerMask TerrainLayer;
+    public LayerMask PathLayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,12 +61,13 @@ public class SpawnFlowers : MonoBehaviour
             // Use Perlin noise to create pockets
             float noiseValue = Mathf.PerlinNoise((spawnPosition.x + offsetX) * 0.01f, (spawnPosition.z + offsetZ) * 0.01f);
 
+            int layerMask = TerrainLayer.value & ~PathLayer.value;
             if (noiseValue > pocketThreshold)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(spawnPosition, Vector3.down, out hit))
+                if (Physics.Raycast(spawnPosition, Vector3.down, out hit, layerMask))
                 {
-                    if (hit.transform.gameObject.tag != "water")
+                    if (hit.transform.gameObject.tag != "water" && hit.transform.gameObject.tag != "Waypoint")
                     {
                         placedTrees[i] = Instantiate(tree[chosen], hit.point, Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0)), parent.transform);
                         placedTrees[i].gameObject.transform.localScale += new Vector3(treeScale[4], treeScale[4], treeScale[4]);
