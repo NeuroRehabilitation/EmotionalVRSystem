@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Rain.unity
     guid: 41546b966fa2a684e873e2a11e791e60
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Fire.unity
     guid: 92456da3c25b27a40bb678b3d3e3c621
+  - enabled: 0
+    path: Assets/Scenes/Dark.unity
+    guid: ec45264e4bcc03e4b87060eb8d01c4a1
+  - enabled: 1
+    path: Assets/Scenes/Flowers.unity
+    guid: d14b6562990e41849a9a8fc4c4317f03
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: eefb993684c918942981e8338b07a9d9, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: c17dd7c4f9064a444876db68c09b32fb, type: 2}
