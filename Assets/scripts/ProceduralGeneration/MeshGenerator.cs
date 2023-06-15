@@ -39,17 +39,31 @@ public class MeshGenerator : MonoBehaviour
     public float offSetZ = .3f;
 
     [Header("Randomizes offsets' value")]
-    public int seed = 0;
+    public int seed;
+
+    private int[] seeds = { 0, 101, 500, 700 };
 
     [Header("Spawnable Objects")]
     public GameObject[] Bridges;
 
     [Header("Path and Helpers")]
     public GameObject Scout;
-    public Transform PathDestination;
+    private Transform PathDestination;
     public GameObject PathMaker;
     public GameObject Finish;
     public bool isStatic=false;
+
+    private void Awake()
+    {
+        System.Random random = new System.Random();
+        int randomIndex = random.Next(seeds.Length);
+        seed = seeds[randomIndex];
+        GameObject pathPrefab = Instantiate(Resources.Load<GameObject>("path" + seed));
+
+        Transform pathTransform = pathPrefab.transform;
+        int lastChildIndex = pathTransform.childCount - 1;
+        PathDestination = pathTransform.GetChild(lastChildIndex);
+    }
 
     void Start()
     {

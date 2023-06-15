@@ -2372,6 +2372,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e8a63a4c52eed542923d7155c1d2ff9, type: 3}
+--- !u!1 &1054082524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3110084981022826665, guid: 0e8a63a4c52eed542923d7155c1d2ff9, type: 3}
+  m_PrefabInstance: {fileID: 1054082523}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1064252510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 693683631889050206, guid: 0e8a63a4c52eed542923d7155c1d2ff9, type: 3}
@@ -4381,7 +4386,7 @@ MonoBehaviour:
   pointPosition: {x: 0, y: 0, z: 0}
   pointPositionLate: {x: 0, y: 0, z: 0}
   myNavMeshAgent: {fileID: 1738939506}
-  destination: {fileID: 0}
+  destination: {fileID: 1054082524}
   waypoints:
   - {fileID: 1129203294}
   - {fileID: 114452815}
@@ -4485,7 +4490,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 5
+  m_Radius: 7
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1762655152 stripped
 GameObject:

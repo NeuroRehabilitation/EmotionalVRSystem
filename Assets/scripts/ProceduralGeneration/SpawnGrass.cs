@@ -32,11 +32,11 @@ public class SpawnGrass : MonoBehaviour
 
             // Use Perlin noise to create pockets
             float noiseValue = Mathf.PerlinNoise((spawnPosition.x + offsetX) * 0.01f, (spawnPosition.z + offsetZ) * 0.01f);
-            int layerMask = 1 << LayerMask.NameToLayer("Terrain");
+
             if (noiseValue > pocketThreshold)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(spawnPosition, Vector3.down, out hit, layerMask))
+                if (Physics.Raycast(spawnPosition, Vector3.down, out hit))
                 {
                     if (hit.transform.gameObject.tag != "water")
                         placedGrass[i] = Instantiate(tree[chosen], new Vector3 (hit.point.x, hit.point.y+2.0f,hit.point.z), Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0)), parent.transform);

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1231316409091325999}
   m_Layer: 0
-  m_Name: Waipont
+  m_Name: Waypoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

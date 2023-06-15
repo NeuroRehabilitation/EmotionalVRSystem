@@ -20,8 +20,8 @@ public class PathCreator : MonoBehaviour
     public Vector3 pointPosition;
     public Vector3 pointPositionLate;
     public NavMeshAgent myNavMeshAgent;
-    public GameObject destination;
-    public Transform[] waypoints;
+    //public GameObject destination;
+    public List<Transform> waypoints = new List<Transform>();
     public int currentWaypoint = 0;
 
     [Header("Milestones and environment objects")]
@@ -42,24 +42,12 @@ public class PathCreator : MonoBehaviour
 
 
     // Destroy grass objects upon collision to keep the path clear
-    /*private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("grass"))
-        {
-            Destroy(collision.gameObject);
-        }
-
-        if (collision.gameObject.CompareTag("FinishPrimary"))
-        {
-            OnFinishPrimary(collision);
-        }
-    }*/
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Waypoint"))
         {
-            if (currentWaypoint < waypoints.Length-1)
+            if (currentWaypoint < waypoints.Count-1)
             {
                 currentWaypoint++;
                 myNavMeshAgent.SetDestination(waypoints[currentWaypoint].position);
@@ -165,6 +153,13 @@ public class PathCreator : MonoBehaviour
     {
         InvokeRepeating("PlaceAnchor", 0, 0.2f); //calls PlaceAnchor() every 0.2 sec
 
+        GameObject[] taggedPoints = GameObject.FindGameObjectsWithTag("Waypoint");
+
+        foreach(GameObject taggedPoint in taggedPoints)
+        {
+            waypoints.Add(taggedPoint.transform);
+        }
+
     }
     
 
@@ -200,7 +195,7 @@ public class PathCreator : MonoBehaviour
         float AngleBetweenPathmakerPositions = UpdateAgentPosition();
 
         // Instantiate environment objects along the path
-        PlaceEnvironmentObjects(randomRotation, AngleBetweenPathmakerPositions);
+        //PlaceEnvironmentObjects(randomRotation, AngleBetweenPathmakerPositions);
     }
 
     // Generate a random rotation for instantiated objects
