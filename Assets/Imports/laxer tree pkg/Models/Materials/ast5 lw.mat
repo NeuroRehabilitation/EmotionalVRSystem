@@ -70,7 +70,7 @@ Material:
     - _NormalMapKwToggle: 0
     - _Occlusion: 0.71428573
     - _ShadowStrength: 1
-    - _Shininess: 0.01
+    - _Shininess: 0.162
     - _SquashAmount: 1
     - _SubsurfaceIndirect: 0.25
     - _SubsurfaceKwToggle: 0
