@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5008824685821686525}
   - component: {fileID: 1592576825648540511}
   - component: {fileID: 8489990174542484683}
+  - component: {fileID: 5611166128347111082}
   m_Layer: 7
   m_Name: TreeOnFire
   m_TagString: grass
@@ -74,6 +75,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.675704, y: 29.627647, z: 25.478588}
   m_Center: {x: 0, y: 17.515648, z: 0}
+--- !u!205 &5611166128347111082
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7021152484269114554}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.003807169
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4592195669838271804}
+  m_Enabled: 1
 --- !u!1001 &653353035482777530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -158,6 +178,11 @@ PrefabInstance:
 --- !u!4 &4426179896688324262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3782423583671380252, guid: c3b8283761381154ab7b48fa7d66d39b, type: 3}
+  m_PrefabInstance: {fileID: 653353035482777530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!199 &4592195669838271804 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 3939502601448706694, guid: c3b8283761381154ab7b48fa7d66d39b, type: 3}
   m_PrefabInstance: {fileID: 653353035482777530}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1823772295657410048

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3339794}
   - component: {fileID: 2371986}
   - component: {fileID: 2080290850885607566}
+  - component: {fileID: -1195845639863840475}
   m_Layer: 7
   m_Name: Flower-2-Yellow
   m_TagString: grass
@@ -105,3 +106,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.47457898, y: 0.583842, z: 0.43754566}
   m_Center: {x: 0.2290631, y: 0.29521665, z: -0.068479486}
+--- !u!205 &-1195845639863840475
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126406}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.0046774102
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2371986}
+  m_Enabled: 1
