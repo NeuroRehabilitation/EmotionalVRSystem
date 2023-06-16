@@ -55,7 +55,7 @@ Material:
     - _TranslucencyViewDependency: 1
     - _WindQuality: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.63529414, g: 0.44705883, b: 0.44705883, a: 1}
     - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _Scale: {r: 1, g: 1, b: 1, a: 1}
     - _TranslucencyColor: {r: 0.73, g: 0.85, b: 0.41, a: 1}
