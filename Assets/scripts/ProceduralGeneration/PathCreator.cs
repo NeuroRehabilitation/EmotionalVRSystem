@@ -45,8 +45,9 @@ public class PathCreator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Waypoint"))
+        if (other.gameObject.CompareTag("Waypoint") && ShouldDrawPath())
         {
+
             if (currentWaypoint < waypoints.Count-1)
             {
                 currentWaypoint++;
@@ -151,7 +152,7 @@ public class PathCreator : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("PlaceAnchor", 0, 0.2f); //calls PlaceAnchor() every 0.2 sec
+        InvokeRepeating("PlaceAnchor", 0, 0.4f); //calls PlaceAnchor() every 0.2 sec
 
         GameObject[] taggedPoints = GameObject.FindGameObjectsWithTag("Waypoint");
 
