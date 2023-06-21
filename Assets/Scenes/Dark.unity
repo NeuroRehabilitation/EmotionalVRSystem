@@ -3352,7 +3352,7 @@ MonoBehaviour:
   m_SnapThresholdDistance: 10
   m_Reticle: {fileID: 8745113593698698764, guid: dec86d4d3f35b5a42b38f610054e6ffc, type: 3}
   m_BlockedReticle: {fileID: 0}
-  m_StopLineAtFirstRaycastHit: 1
+  m_StopLineAtFirstRaycastHit: 0
   m_StopLineAtSelection: 0
   m_SnapEndpointIfAvailable: 0
 --- !u!120 &1543578979
@@ -3545,11 +3545,11 @@ MonoBehaviour:
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
   m_LineType: 1
-  m_BlendVisualLinePoints: 1
+  m_BlendVisualLinePoints: 0
   m_MaxRaycastDistance: 30
   m_RayOriginTransform: {fileID: 0}
   m_ReferenceFrame: {fileID: 0}
-  m_Velocity: 40
+  m_Velocity: 30
   m_Acceleration: 9.8
   m_AdditionalGroundHeight: 1
   m_AdditionalFlightTime: 1
@@ -3565,7 +3565,7 @@ MonoBehaviour:
     m_Bits: 64
   m_RaycastTriggerInteraction: 1
   m_RaycastSnapVolumeInteraction: 1
-  m_HitClosestOnly: 1
+  m_HitClosestOnly: 0
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
   m_AutoDeselect: 0
