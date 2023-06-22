@@ -152,7 +152,7 @@ public class PathCreator : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("PlaceAnchor", 0, 0.4f); //calls PlaceAnchor() every 0.2 sec
+        InvokeRepeating("PlaceAnchor", 0, 0.2f); //calls PlaceAnchor() every 0.2 sec
 
         GameObject[] taggedPoints = GameObject.FindGameObjectsWithTag("Waypoint");
 
