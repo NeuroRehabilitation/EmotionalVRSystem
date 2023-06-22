@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.501
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.22122476, g: 0.24054402, b: 0.27245474, a: 0.501}
+  m_IndirectSpecularColor: {r: 0.2212235, g: 0.24054343, b: 0.2724546, a: 0.501}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3508,7 +3508,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls: []
-  m_SelectActionTrigger: 1
+  m_SelectActionTrigger: 0
   m_HideControllerOnSelect: 0
   m_AllowHoveredActivate: 0
   m_TargetPriorityMode: 0
@@ -3544,20 +3544,20 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
-  m_LineType: 1
+  m_LineType: 2
   m_BlendVisualLinePoints: 0
   m_MaxRaycastDistance: 30
   m_RayOriginTransform: {fileID: 0}
-  m_ReferenceFrame: {fileID: 0}
-  m_Velocity: 30
+  m_ReferenceFrame: {fileID: 1012857042}
+  m_Velocity: 20
   m_Acceleration: 9.8
   m_AdditionalGroundHeight: 1
   m_AdditionalFlightTime: 1
-  m_EndPointDistance: 30
-  m_EndPointHeight: -10
-  m_ControlPointDistance: 10
-  m_ControlPointHeight: 5
-  m_SampleFrequency: 30
+  m_EndPointDistance: 15.95
+  m_EndPointHeight: -5
+  m_ControlPointDistance: 5.19
+  m_ControlPointHeight: 5.2
+  m_SampleFrequency: 22
   m_HitDetectionType: 1
   m_SphereCastRadius: 0.25
   m_RaycastMask:
@@ -3565,7 +3565,7 @@ MonoBehaviour:
     m_Bits: 64
   m_RaycastTriggerInteraction: 1
   m_RaycastSnapVolumeInteraction: 1
-  m_HitClosestOnly: 0
+  m_HitClosestOnly: 1
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
   m_AutoDeselect: 0
