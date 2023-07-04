@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.501
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 103692759}
-  m_IndirectSpecularColor: {r: 0.49183732, g: 0.56944287, b: 0.57772195, a: 0.501}
+  m_IndirectSpecularColor: {r: 0.49290103, g: 0.5703383, b: 0.5780966, a: 0.501}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2341,8 +2341,8 @@ MonoBehaviour:
   m_Camera: {fileID: 1624410982}
   m_OriginBaseGameObject: {fileID: 1012857039}
   m_CameraFloorOffsetObject: {fileID: 477573727}
-  m_RequestedTrackingOriginMode: 2
-  m_CameraYOffset: 1.5
+  m_RequestedTrackingOriginMode: 1
+  m_CameraYOffset: 1.9
 --- !u!4 &1012857042
 Transform:
   m_ObjectHideFlags: 0
