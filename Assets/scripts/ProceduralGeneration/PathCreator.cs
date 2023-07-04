@@ -40,6 +40,9 @@ public class PathCreator : MonoBehaviour
     public float TimeTotal;
     private float AngleBetweenPathmakerPositions;
 
+    public Countdown Countdown;
+    private bool countdownStarted = false;
+
 
     // Destroy grass objects upon collision to keep the path clear
 
@@ -138,20 +141,25 @@ public class PathCreator : MonoBehaviour
     private void FixedUpdate()
     {
         // Update the total time elapsed
-        UpdateTime();
+        //UpdateTime();
         //Debug.Log("Has Path = " + myNavMeshAgent.hasPath);
        
      
         // Check if the agent should draw the path and update accordingly
         if (ShouldDrawPath())
         {
-            
+            if (!countdownStarted)
+            {
+                countdownStarted = true;
+                Countdown.StartCountdown();
+            }
             UpdatePath();
         }
     }
 
     private void Start()
     {
+
         InvokeRepeating("PlaceAnchor", 0, 0.2f); //calls PlaceAnchor() every 0.2 sec
 
         GameObject[] taggedPoints = GameObject.FindGameObjectsWithTag("Waypoint");
