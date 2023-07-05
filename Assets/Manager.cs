@@ -12,18 +12,20 @@ public class Manager : MonoBehaviour
 
     void Awake()
     {
+        DontDestroyOnLoad(this);
         Scenes = Enumerable.Range(1,SceneManager.sceneCountInBuildSettings-1).ToList();
     }
 
     private void Start()
     {
-        Shuffle();
+        if (Scenes.Count > 0) { Shuffle(); }
+        
     }
 
     public void Shuffle()
     {
         System.Random random = new System.Random();
-        randomIndex = random.Next(Scenes.Count);
+
     }
 
     public void LoadScene()

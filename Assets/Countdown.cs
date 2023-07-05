@@ -12,11 +12,13 @@ public class Countdown : MonoBehaviour
     private bool isCountdownStarted = false;
 
     public TimeController TimeController;
+    private Manager Manager;
 
 
     private void Awake()
     {
         countdownText.text = currentTime.ToString("Prepare to Start");
+        Manager = FindObjectOfType<Manager>();
     }
     private void Start()
     {
@@ -43,7 +45,13 @@ public class Countdown : MonoBehaviour
             if (currentTime <= 0 && TimeController.isFinished)
             {
                 StopCountdown();
-                SceneManager.LoadScene(0);
+                if (Manager.Scenes.Count > 0)
+                {
+                    Manager.Shuffle();
+                    Manager.LoadScene();
+                }
+               // else
+                  //  SceneManager.LoadScene(0);
             }
         }
 
