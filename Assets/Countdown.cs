@@ -1,10 +1,11 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
-    public float countdownTime = 5f; // Time in seconds for the countdown
+    public float countdownTime = 6f; // Time in seconds for the countdown
     public TextMeshProUGUI countdownText; // Reference to the UI text element
 
     private float currentTime = 0f;
@@ -26,27 +27,37 @@ public class Countdown : MonoBehaviour
     {
         if (isCountdownStarted)
         {
+
             currentTime -= Time.deltaTime;
-            countdownText.text = currentTime.ToString("0");
 
-            if (currentTime < 1)
-            {
-                countdownText.text = "Start!";
-                
-            }
+            if ( currentTime <= 5f ) { countdownText.text = currentTime.ToString("0"); }
+            
+            if (currentTime < 1 && !TimeController.isFinished) { countdownText.text = "Start!"; }
 
-            if (currentTime <= 0)
+            if (currentTime <= 0 && !TimeController.isFinished)
             {
                 StopCountdown();
                 TimeController.StartTimer();
             }
+             
+            if (currentTime <= 0 && TimeController.isFinished)
+            {
+                StopCountdown();
+                SceneManager.LoadScene(0);
+            }
+        }
+
+        if (!isCountdownStarted && TimeController.isFinished)
+        {
+            StartCountdown();
         }
     }
 
     public void StartCountdown()
     {
+        ResetCountdown();
         isCountdownStarted = true;
-        currentTime = countdownTime;
+        
     }
 
     public void StopCountdown()
@@ -58,6 +69,6 @@ public class Countdown : MonoBehaviour
 
     public void ResetCountdown()
     {
-        countdownTime = 5f;
+        currentTime = countdownTime;
     }
 }

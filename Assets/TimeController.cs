@@ -6,6 +6,7 @@ public class TimeController : MonoBehaviour
 {
     private float elapsedTime;
     public bool isRunning;
+    public bool isFinished = false;
     public float duration = 0.2f; //duration of experiment in minutes.
 
     public Countdown Countdown;
@@ -13,18 +14,16 @@ public class TimeController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(isRunning);
         if (isRunning)
         {
             elapsedTime += Time.deltaTime;
-            Debug.Log(elapsedTime);
+            //Debug.Log(elapsedTime);
         }
 
         if (isRunning && elapsedTime >= duration * 60)
         {
-            StopTimer();
             Countdown.countdownText.gameObject.SetActive(true);
-            
+            StopTimer();
         }
     }
 
@@ -35,9 +34,9 @@ public class TimeController : MonoBehaviour
 
     public void StopTimer()
     {
-        Countdown.countdownText.text = "Finishin in...";
+        Countdown.countdownText.text = "Finishing in...";
+        isFinished = true;
         isRunning = false;
-        Countdown.StartCountdown();
         
     }
 
