@@ -1581,6 +1581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRunning: 0
+  isFinished: 0
   duration: 0.1
   Countdown: {fileID: 1325930183}
 --- !u!4 &484445261
@@ -3367,7 +3368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57390840a94688b4f8eb7bb144f77c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTime: 5
+  countdownTime: 7
   countdownText: {fileID: 687415810}
   TimeController: {fileID: 484445260}
 --- !u!4 &1325930184
