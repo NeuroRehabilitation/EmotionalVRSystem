@@ -13,6 +13,7 @@ public class Countdown : MonoBehaviour
 
     public TimeController TimeController;
     private Manager Manager;
+    private int NumberRounds = 0;
 
 
     private void Awake()
@@ -50,8 +51,19 @@ public class Countdown : MonoBehaviour
                     Manager.Shuffle();
                     Manager.LoadScene();
                 }
-               // else
-                  //  SceneManager.LoadScene(0);
+                else
+                {
+                    NumberRounds++;
+                    Manager.CreateList();
+                    Manager.Shuffle();
+                    Manager.LoadScene();
+                }
+                    
+            }
+
+            if (NumberRounds > 1)
+            {
+                SceneManager.LoadScene(0);
             }
         }
 

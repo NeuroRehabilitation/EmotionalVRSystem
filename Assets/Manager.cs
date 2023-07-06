@@ -13,7 +13,7 @@ public class Manager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(this);
-        Scenes = Enumerable.Range(1,SceneManager.sceneCountInBuildSettings-1).ToList();
+        CreateList();
     }
 
     private void Start()
@@ -25,12 +25,17 @@ public class Manager : MonoBehaviour
     public void Shuffle()
     {
         System.Random random = new System.Random();
-
+        randomIndex = random.Next(Scenes.Count);
     }
 
     public void LoadScene()
     {
         SceneManager.LoadScene(Scenes[randomIndex]);
         Scenes.RemoveAt(randomIndex);
+    }
+
+    public void CreateList()
+    {
+        Scenes = Enumerable.Range(1, SceneManager.sceneCountInBuildSettings - 1).ToList();
     }
 }
