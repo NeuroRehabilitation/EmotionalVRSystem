@@ -13,7 +13,7 @@ public class Countdown : MonoBehaviour
 
     public TimeController TimeController;
     private Manager Manager;
-    private int NumberRounds = 0;
+    public int NumberRounds = 0;
 
 
     private void Awake()
@@ -24,6 +24,7 @@ public class Countdown : MonoBehaviour
     private void Start()
     {
         currentTime = countdownTime;
+        NumberRounds++;
     }
 
     private void Update()
