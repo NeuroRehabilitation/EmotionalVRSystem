@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Flowers.unity
     guid: d14b6562990e41849a9a8fc4c4317f03
+  - enabled: 0
+    path: Assets/Scenes/VAS.unity
+    guid: 98245e68ff5001846b8e85f9c9836db8
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: eefb993684c918942981e8338b07a9d9, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: c17dd7c4f9064a444876db68c09b32fb, type: 2}
