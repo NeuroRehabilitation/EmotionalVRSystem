@@ -1,17 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VAS : MonoBehaviour
+public class SAM : MonoBehaviour
 {
-    [Header("VAS Toggle Scales")]
+    [Header("SAM Toggle Scales")]
     public ToggleGroup[] toggles;
 
-    [Header("VAS Gameobjects")]
-    public GameObject[] VAS_Items;
+    [Header("SAM Gameobjects")]
+    public GameObject[] SAM_Items;
 
     [Header("Next Button")]
     public Button NextButton;
@@ -28,7 +26,7 @@ public class VAS : MonoBehaviour
         {
             toggles[i].allowSwitchOff = true;
 
-            foreach(Toggle toggle in toggles[i].GetComponentsInChildren<Toggle>()) 
+            foreach (Toggle toggle in toggles[i].GetComponentsInChildren<Toggle>())
             {
                 toggle.onValueChanged.AddListener(OnToggleChanged);
             }
@@ -39,14 +37,14 @@ public class VAS : MonoBehaviour
 
     void OnToggleChanged(bool isOn)
     {
-        if (isOn) 
+        if (isOn)
         {
             selected = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.GetComponent<Toggle>();
             NextButton.interactable = true;
         }
         else
             NextButton.interactable = false;
-           
+
         Debug.Log(selected);
     }
 
@@ -55,9 +53,9 @@ public class VAS : MonoBehaviour
         //if (currentToggle >= 3)
 
         answers[currentToggle] = selected.name;
-        VAS_Items[currentToggle].SetActive(false);
+        SAM_Items[currentToggle].SetActive(false);
         currentToggle++;
-        VAS_Items[currentToggle].SetActive(true);
+        SAM_Items[currentToggle].SetActive(true);
 
     }
 }
