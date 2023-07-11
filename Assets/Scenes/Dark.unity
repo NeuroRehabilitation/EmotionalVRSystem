@@ -652,6 +652,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3494370882950547101, guid: 98baefdd242b0a9449b386b74eec3886, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494370882950547101, guid: 98baefdd242b0a9449b386b74eec3886, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494370882950547101, guid: 98baefdd242b0a9449b386b74eec3886, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494370882950547101, guid: 98baefdd242b0a9449b386b74eec3886, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -702,6 +714,18 @@ PrefabInstance:
     - target: {fileID: 5864252035195849437, guid: 98baefdd242b0a9449b386b74eec3886, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225168933839357932, guid: 98baefdd242b0a9449b386b74eec3886, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1624410982}
+    - target: {fileID: 7225168933839357932, guid: 98baefdd242b0a9449b386b74eec3886, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984969866418868290, guid: 98baefdd242b0a9449b386b74eec3886, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
