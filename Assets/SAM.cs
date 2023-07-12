@@ -19,8 +19,12 @@ public class SAM : MonoBehaviour
 
     Toggle selected = null;
 
+    private Manager Manager;
+
     void Start()
     {
+        Manager = FindObjectOfType<Manager>();
+
         for (int i = 0; i < toggles.Length; i++)
         {
             toggles[i].allowSwitchOff = true;
@@ -49,6 +53,7 @@ public class SAM : MonoBehaviour
     {
         if (currentToggle >= 1)
         {
+            Manager.SAM_answers = answers;
             SceneManager.LoadScene("VAS");
         }
             
