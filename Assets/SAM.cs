@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SAM : MonoBehaviour
 {
@@ -44,18 +43,21 @@ public class SAM : MonoBehaviour
         }
         else
             NextButton.interactable = false;
-
-        Debug.Log(selected);
     }
 
     public void Submit()
     {
-        //if (currentToggle >= 3)
-
-        answers[currentToggle] = selected.name;
-        SAM_Items[currentToggle].SetActive(false);
-        currentToggle++;
-        SAM_Items[currentToggle].SetActive(true);
-
+        if (currentToggle >= 1)
+        {
+            SceneManager.LoadScene("VAS");
+        }
+            
+        if(currentToggle < SAM_Items.Length-1) 
+        {
+            answers[currentToggle] = selected.name;
+            SAM_Items[currentToggle].SetActive(false);
+            currentToggle++;
+            SAM_Items[currentToggle].SetActive(true);
+        }
     }
 }

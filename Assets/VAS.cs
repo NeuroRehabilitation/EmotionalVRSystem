@@ -22,8 +22,13 @@ public class VAS : MonoBehaviour
 
     Toggle selected = null;
 
+    private Manager Manager;
+
+
     void Start()
     {
+        Manager = FindObjectOfType<Manager>();
+
         for (int i = 0; i < toggles.Length; i++)
         {
             toggles[i].allowSwitchOff = true;
@@ -46,18 +51,36 @@ public class VAS : MonoBehaviour
         }
         else
             NextButton.interactable = false;
-           
-        Debug.Log(selected);
     }
 
     public void Submit()
     {
-        //if (currentToggle >= 3)
+        if (currentToggle >= VAS_Items.Length-1)
+        {
+            if (Manager.Scenes.Count > 0)
+            {
+                Manager.Shuffle();
+                Manager.LoadScene();
+            }
+            else
+            {
+                Manager.currentRound++;
+                Manager.CreateList();
+                Manager.Shuffle();
+                Manager.LoadScene();
+            }
+        }
+        else
+        {
+            answers[currentToggle] = selected.name;
+            VAS_Items[currentToggle].SetActive(false);
+            currentToggle++;
+            VAS_Items[currentToggle].SetActive(true);
+        }
 
-        answers[currentToggle] = selected.name;
-        VAS_Items[currentToggle].SetActive(false);
-        currentToggle++;
-        VAS_Items[currentToggle].SetActive(true);
-
+        if (Manager.currentRound > Manager.NumberRounds)
+        {
+            Manager.Quit();
+        }
     }
 }

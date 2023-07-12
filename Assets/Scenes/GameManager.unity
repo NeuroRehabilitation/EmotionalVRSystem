@@ -1181,6 +1181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scenes: 
   randomIndex: 0
+  NumberRounds: 2
+  currentRound: 1
 --- !u!4 &833630556
 Transform:
   m_ObjectHideFlags: 0

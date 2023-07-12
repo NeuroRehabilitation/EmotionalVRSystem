@@ -7,8 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
+    [Header("Scenes")]
     public List<int> Scenes;
+
+    [Header("Selected Scene Index")]
     public int randomIndex;
+
+    [Header("Number of Rounds")]
+    public int NumberRounds = 2;
+    public int currentRound = 1;
+
 
     void Awake()
     {
@@ -19,7 +27,14 @@ public class Manager : MonoBehaviour
     private void Start()
     {
         if (Scenes.Count > 0) { Shuffle(); }
-        
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Quit();
+        }
     }
 
     public void Shuffle()
@@ -36,6 +51,12 @@ public class Manager : MonoBehaviour
 
     public void CreateList()
     {
-        Scenes = Enumerable.Range(1, SceneManager.sceneCountInBuildSettings - 1).ToList();
+        Scenes = Enumerable.Range(1, SceneManager.sceneCountInBuildSettings - 3).ToList();
+    }
+
+    public void Quit()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 }
