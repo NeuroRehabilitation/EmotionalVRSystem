@@ -11,7 +11,6 @@ public class TimeController : MonoBehaviour
 
     public Countdown Countdown;
 
-
     private void Update()
     {
         if (isRunning)

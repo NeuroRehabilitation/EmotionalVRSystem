@@ -1308,7 +1308,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2644248764399041125, guid: 35e34a451e52bf14ab9db7c4f5c48b42, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2644248764399041125, guid: 35e34a451e52bf14ab9db7c4f5c48b42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1352,7 +1352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5861270974720715672, guid: 35e34a451e52bf14ab9db7c4f5c48b42, type: 3}
       propertyPath: duration
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5861270974720715672, guid: 35e34a451e52bf14ab9db7c4f5c48b42, type: 3}
       propertyPath: Countdown
@@ -2424,7 +2424,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4595993238890482271, guid: 5c1a4b4f71194104daf0439f65134cb2, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4595993238890482271, guid: 5c1a4b4f71194104daf0439f65134cb2, type: 3}
       propertyPath: m_LocalPosition.x

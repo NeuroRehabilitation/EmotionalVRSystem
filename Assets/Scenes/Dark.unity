@@ -721,6 +721,10 @@ PrefabInstance:
       objectReference: {fileID: 1624410982}
     - target: {fileID: 7225168933839357932, guid: 98baefdd242b0a9449b386b74eec3886, type: 3}
       propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225168933839357932, guid: 98baefdd242b0a9449b386b74eec3886, type: 3}
+      propertyPath: m_PixelPerfect
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7984969866418868290, guid: 98baefdd242b0a9449b386b74eec3886, type: 3}
@@ -993,7 +997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5861270974720715672, guid: 35e34a451e52bf14ab9db7c4f5c48b42, type: 3}
       propertyPath: duration
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5861270974720715672, guid: 35e34a451e52bf14ab9db7c4f5c48b42, type: 3}
       propertyPath: Countdown
