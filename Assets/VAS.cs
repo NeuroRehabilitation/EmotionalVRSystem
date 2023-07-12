@@ -57,18 +57,9 @@ public class VAS : MonoBehaviour
     {
         if (currentToggle >= VAS_Items.Length-1)
         {
-            if (Manager.Scenes.Count > 0)
-            {
-                Manager.Shuffle();
-                Manager.LoadScene();
-            }
-            else
-            {
-                Manager.currentRound++;
-                Manager.CreateList();
-                Manager.Shuffle();
-                Manager.LoadScene();
-            }
+            Manager.VAS_answers = answers;
+            Manager.WriteData();
+            Manager.ChangeScene();
         }
         else
         {
@@ -76,11 +67,6 @@ public class VAS : MonoBehaviour
             VAS_Items[currentToggle].SetActive(false);
             currentToggle++;
             VAS_Items[currentToggle].SetActive(true);
-        }
-
-        if (Manager.currentRound > Manager.NumberRounds)
-        {
-            Manager.Quit();
         }
     }
 }

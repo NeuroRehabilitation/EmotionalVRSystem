@@ -17,21 +17,29 @@ public class Manager : MonoBehaviour
     public int NumberRounds = 2;
     public int currentRound = 1;
 
+    public CSV CSV_writer;
+    public string[] SAM_answers;
+    public string[] VAS_answers;
+    public string[] DataToSave;
 
     void Awake()
     {
         DontDestroyOnLoad(this);
         CreateList();
+
+        CSV_writer = GetComponent<CSV>();
     }
 
     private void Start()
     {
         if (Scenes.Count > 0) { Shuffle(); }
+
+        CSV_writer.AddData("Scene", "Valence", "Arousal", "Anger", "Fear", "Joy", "Sad");
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || currentRound > NumberRounds)
         {
             Quit();
         }
@@ -54,8 +62,31 @@ public class Manager : MonoBehaviour
         Scenes = Enumerable.Range(1, SceneManager.sceneCountInBuildSettings - 3).ToList();
     }
 
+    public void WriteData()
+    {
+        DataToSave = SAM_answers.Concat(VAS_answers).ToArray();
+        CSV_writer.AddData(DataToSave);
+    }
+
+    public void ChangeScene()
+    {
+        if (Scenes.Count > 0)
+        {
+            Shuffle();
+            LoadScene();
+        }
+        else
+        {
+            currentRound++;
+            CreateList();
+            Shuffle();
+            LoadScene();
+        }
+    }
+
     public void Quit()
     {
+        CSV_writer.Save("test.csv");
         UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
