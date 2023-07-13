@@ -6,10 +6,16 @@ using UnityEngine;
 
 public class CSV : MonoBehaviour
 {
+    [Header("CSV File")]
     public string filePath;
+    public string directory;
+    public string filename;
+
     private string delimiter = ","; // Change this if you want to use a different delimiter
 
-    private List<string[]> rowData = new List<string[]>();
+    public List<string[]> rowData = new List<string[]>();
+
+    private StreamWriter writer;
 
     // Add a new row of data to the CSV
     public void AddData(params string[] values)
@@ -17,24 +23,31 @@ public class CSV : MonoBehaviour
         rowData.Add(values);
     }
 
-    // Write the data to a CSV file
-    public void Save(string fileName)
+    private void Start()
     {
-        string defaultName = "data.csv";
-        string directory = Application.persistentDataPath;
-        filePath = EditorUtility.SaveFilePanel("Save CSV", directory, defaultName, "csv");
-        Debug.Log(filePath);
-
+        directory = Application.streamingAssetsPath + "/CSV_Data/";
         // Create a StreamWriter to write data to the file
-        StreamWriter writer = new StreamWriter(filePath);
 
+    }
+
+    public void StartWriter()
+    {
+        writer = new StreamWriter(filePath);
+    }
+
+    // Write the data to a CSV file
+    public void WriteToCSV()
+    {
         // Write each row of data to the file
         foreach (string[] row in rowData)
         {
             string line = string.Join(delimiter, row);
             writer.WriteLine(line);
         }
+    }
 
+    public void CloseCSV()
+    {
         // Close the StreamWriter
         writer.Close();
     }

@@ -1,14 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
     [Header("Scenes")]
     public List<int> Scenes;
+    private List<string> currentScene = new List<string>();
 
     [Header("Selected Scene Index")]
     public int randomIndex;
@@ -17,12 +21,18 @@ public class Manager : MonoBehaviour
     public int NumberRounds = 2;
     public int currentRound = 1;
 
-    private CSV CSV_writer;
+    public CSV CSV_writer;
 
     [Header("Scales Answers")]
     public string[] SAM_answers;
     public string[] VAS_answers;
     public string[] DataToSave;
+
+    [Header("User ID")]
+    public TMP_InputField UserID;
+
+    [Header("Start Button")]
+    public Button StartButton;
 
     void Awake()
     {
@@ -30,6 +40,8 @@ public class Manager : MonoBehaviour
         CreateList();
 
         CSV_writer = GetComponent<CSV>();
+
+        StartButton.interactable = false;
     }
 
     private void Start()
@@ -37,6 +49,7 @@ public class Manager : MonoBehaviour
         if (Scenes.Count > 0) { Shuffle(); }
 
         CSV_writer.AddData("Scene", "Valence", "Arousal", "Anger", "Fear", "Joy", "Sad");
+
     }
 
     private void Update()
@@ -47,6 +60,19 @@ public class Manager : MonoBehaviour
         }
     }
 
+    public void ActivateButton()
+    {
+        if (UserID.text != "")
+            StartButton.interactable = true;
+        else StartButton.interactable = false;
+    }
+
+    public void GetUserID()
+    {
+        CSV_writer.filename = UserID.text;
+        CSV_writer.filePath = CSV_writer.directory + CSV_writer.filename + ".csv";
+    }
+
     public void Shuffle()
     {
         System.Random random = new System.Random();
@@ -55,7 +81,10 @@ public class Manager : MonoBehaviour
 
     public void LoadScene()
     {
+      
         SceneManager.LoadScene(Scenes[randomIndex]);
+        currentScene.Add(SceneManager.GetSceneByBuildIndex(Scenes[randomIndex]).name);
+        Debug.Log(currentScene);
         Scenes.RemoveAt(randomIndex);
     }
 
@@ -66,8 +95,10 @@ public class Manager : MonoBehaviour
 
     public void WriteData()
     {
-        DataToSave = SAM_answers.Concat(VAS_answers).ToArray();
+
+        DataToSave = currentScene.Concat(SAM_answers.Concat(VAS_answers).ToArray()).ToArray();
         CSV_writer.AddData(DataToSave);
+        currentScene.Clear();
     }
 
     public void ChangeScene()
@@ -88,8 +119,11 @@ public class Manager : MonoBehaviour
 
     public void Quit()
     {
-        CSV_writer.Save("test.csv");
+        CSV_writer.CloseCSV();
+
+        //Comment this line below when you build the project
         UnityEditor.EditorApplication.isPlaying = false;
+
         Application.Quit();
     }
 }
