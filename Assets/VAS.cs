@@ -55,18 +55,19 @@ public class VAS : MonoBehaviour
 
     public void Submit()
     {
-        if (currentToggle >= VAS_Items.Length-1)
-        {
-            Manager.VAS_answers = answers;
-            Manager.WriteData();
-            Manager.ChangeScene();
-        }
-        else
+        if(currentToggle < VAS_Items.Length - 1)
         {
             answers[currentToggle] = selected.name;
             VAS_Items[currentToggle].SetActive(false);
             currentToggle++;
             VAS_Items[currentToggle].SetActive(true);
+        }
+        else
+        {
+            answers[currentToggle] = selected.name;
+            Manager.VAS_answers = answers;
+            Manager.WriteData();
+            Manager.ChangeScene();
         }
     }
 }

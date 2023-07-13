@@ -51,18 +51,18 @@ public class SAM : MonoBehaviour
 
     public void Submit()
     {
-        if (currentToggle >= 1)
-        {
-            Manager.SAM_answers = answers;
-            SceneManager.LoadScene("VAS");
-        }
-            
-        if(currentToggle < SAM_Items.Length-1) 
+        if(currentToggle == 0) 
         {
             answers[currentToggle] = selected.name;
             SAM_Items[currentToggle].SetActive(false);
             currentToggle++;
             SAM_Items[currentToggle].SetActive(true);
+        }
+        else
+        {
+            answers[currentToggle] = selected.name;
+            Manager.SAM_answers = answers;
+            SceneManager.LoadScene("VAS");
         }
     }
 }
