@@ -17,7 +17,9 @@ public class Manager : MonoBehaviour
     public int NumberRounds = 2;
     public int currentRound = 1;
 
-    public CSV CSV_writer;
+    private CSV CSV_writer;
+
+    [Header("Scales Answers")]
     public string[] SAM_answers;
     public string[] VAS_answers;
     public string[] DataToSave;

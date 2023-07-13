@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class CSV : MonoBehaviour
 {
-    private string filePath;
+    public string filePath;
     private string delimiter = ","; // Change this if you want to use a different delimiter
 
     private List<string[]> rowData = new List<string[]>();
@@ -23,6 +23,7 @@ public class CSV : MonoBehaviour
         string defaultName = "data.csv";
         string directory = Application.persistentDataPath;
         filePath = EditorUtility.SaveFilePanel("Save CSV", directory, defaultName, "csv");
+        Debug.Log(filePath);
 
         // Create a StreamWriter to write data to the file
         StreamWriter writer = new StreamWriter(filePath);
@@ -36,7 +37,5 @@ public class CSV : MonoBehaviour
 
         // Close the StreamWriter
         writer.Close();
-
-        Debug.Log("CSV file saved to: " + filePath);
     }
 }
