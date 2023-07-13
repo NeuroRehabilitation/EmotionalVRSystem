@@ -62,6 +62,7 @@ public class SAM : MonoBehaviour
         {
             answers[currentToggle] = selected.name;
             Manager.SAM_answers = answers;
+            Manager.SAM.StreamData(answers);
             SceneManager.LoadScene("VAS");
         }
     }

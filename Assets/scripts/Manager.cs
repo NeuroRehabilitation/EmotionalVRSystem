@@ -21,6 +21,7 @@ public class Manager : MonoBehaviour
     public int NumberRounds = 2;
     public int currentRound = 1;
 
+    [Header("CSV")]
     public CSV CSV_writer;
 
     [Header("Scales Answers")]
@@ -33,6 +34,10 @@ public class Manager : MonoBehaviour
 
     [Header("Start Button")]
     public Button StartButton;
+
+    [Header("LSL Streams")]
+    public LSLStreamer SAM;
+    public LSLStreamer VAS;
 
     void Awake()
     {
@@ -49,6 +54,9 @@ public class Manager : MonoBehaviour
         if (Scenes.Count > 0) { Shuffle(); }
 
         CSV_writer.AddData("Scene", "Valence", "Arousal", "Anger", "Fear", "Joy", "Sad");
+
+        SAM.StartStream();
+        VAS.StartStream();
 
     }
 
@@ -84,7 +92,6 @@ public class Manager : MonoBehaviour
       
         SceneManager.LoadScene(Scenes[randomIndex]);
         currentScene.Add(SceneManager.GetSceneByBuildIndex(Scenes[randomIndex]).name);
-        Debug.Log(currentScene);
         Scenes.RemoveAt(randomIndex);
     }
 
