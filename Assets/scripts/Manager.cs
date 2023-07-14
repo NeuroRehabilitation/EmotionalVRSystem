@@ -25,8 +25,8 @@ public class Manager : MonoBehaviour
     public CSV CSV_writer;
 
     [Header("Scales Answers")]
-    public string[] SAM_answers;
-    public string[] VAS_answers;
+    public string[] SAM_answers = new string[2];
+    public string[] VAS_answers = new string[4];
     public string[] DataToSave;
 
     [Header("User ID")]

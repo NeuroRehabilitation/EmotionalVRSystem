@@ -1727,8 +1727,14 @@ MonoBehaviour:
   NumberRounds: 2
   currentRound: 1
   CSV_writer: {fileID: 0}
-  SAM_answers: []
-  VAS_answers: []
+  SAM_answers:
+  - 
+  - 
+  VAS_answers:
+  - 
+  - 
+  - 
+  - 
   DataToSave: []
   UserID: {fileID: 781697478}
   StartButton: {fileID: 46605868}

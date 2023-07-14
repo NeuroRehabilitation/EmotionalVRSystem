@@ -1,6 +1,7 @@
 using LSL;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LSLStreamer : MonoBehaviour
@@ -22,7 +23,7 @@ public class LSLStreamer : MonoBehaviour
 
     public void StartStream()
     {
-        StreamInfo streamInfo = new StreamInfo(StreamName, StreamType, Channels.Count, 50, LSL.channel_format_t.cf_string);
+        StreamInfo streamInfo = new StreamInfo(StreamName, StreamType, Channels.Count, 50, LSL.channel_format_t.cf_float32);
         XMLElement chans = streamInfo.desc().append_child("channels");
         foreach (string channel in Channels)
         {
@@ -31,16 +32,16 @@ public class LSLStreamer : MonoBehaviour
         Outlet = new StreamOutlet(streamInfo);
         Stream_On=true;
     }
-    public void StreamData(string[] sample)
+    public void StreamData(float[] sample)
     {
         if (Stream_On)
         {
             Outlet.push_sample(sample);
-            Debug.Log("Data Sent->"+sample);
+            //Debug.Log("Data Sent->"+sample);
         }
         else
         {
-            Debug.Log("Stream hasn't been started");
+            //Debug.Log("Stream hasn't been started");
         }
     }
 

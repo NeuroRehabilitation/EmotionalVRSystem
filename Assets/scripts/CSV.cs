@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class CSV : MonoBehaviour
 {
+    
     [Header("CSV File")]
     public string filePath;
     public string directory;
@@ -51,4 +52,5 @@ public class CSV : MonoBehaviour
         // Close the StreamWriter
         writer.Close();
     }
+    
 }
