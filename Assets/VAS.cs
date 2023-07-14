@@ -16,7 +16,7 @@ public class VAS : MonoBehaviour
     [Header("Next Button")]
     public Button NextButton;
 
-    public string[] answers = new string[4];
+    public float[] answers = new float[4];
 
     private int currentToggle = 0;
 
@@ -57,16 +57,17 @@ public class VAS : MonoBehaviour
     {
         if(currentToggle < VAS_Items.Length - 1)
         {
-            answers[currentToggle] = selected.name;
+            answers[currentToggle] = float.Parse(selected.name);
+            Manager.VAS_answers[currentToggle] = selected.name;
             VAS_Items[currentToggle].SetActive(false);
             currentToggle++;
             VAS_Items[currentToggle].SetActive(true);
         }
         else
         {
-            answers[currentToggle] = selected.name;
-            Manager.VAS_answers = answers;
-            Manager.SAM.StreamData(answers);
+            answers[currentToggle] = float.Parse(selected.name);
+            Manager.VAS_answers[currentToggle] = selected.name;
+            Manager.VAS.StreamData(answers);
             Manager.WriteData();
             Manager.CSV_writer.WriteToCSV();
             Manager.ChangeScene();
