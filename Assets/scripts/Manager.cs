@@ -12,7 +12,7 @@ public class Manager : MonoBehaviour
 {
     [Header("Scenes")]
     public List<int> Scenes;
-    private List<string> currentScene = new List<string>();
+    public List<string> currentScene = new List<string>();
 
     [Header("Selected Scene Index")]
     public int randomIndex;
@@ -38,6 +38,7 @@ public class Manager : MonoBehaviour
     [Header("LSL Streams")]
     public LSLStreamer SAM;
     public LSLStreamer VAS;
+    public LSLStreamer Markers;
 
     void Awake()
     {
@@ -57,6 +58,7 @@ public class Manager : MonoBehaviour
 
         SAM.StartStream();
         VAS.StartStream();
+        Markers.StartStream();
 
     }
 

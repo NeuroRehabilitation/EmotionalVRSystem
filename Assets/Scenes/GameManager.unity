@@ -1692,6 +1692,115 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781697476}
   m_CullTransparentMesh: 1
+--- !u!1001 &789354309
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 917266800}
+    m_Modifications:
+    - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: StreamID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: SampleRate
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: StreamName
+      value: Markers
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: StreamType
+      value: SceneMarkers
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: typeStream
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: Channels.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: Channels.Array.data[0]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: Channels.Array.data[1]
+      value: Marker
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524615, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524615, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -178.68427
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524615, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -168.73514
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524615, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -699.97546
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524615, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524615, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524615, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524615, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524615, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524615, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524615, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524617, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: m_Name
+      value: Markers
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+--- !u!4 &789354310 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7675007392852524615, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+  m_PrefabInstance: {fileID: 789354309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &789354311 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+  m_PrefabInstance: {fileID: 789354309}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18ab845f61abee48a13f0b26167a88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &833630554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,6 +1832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scenes: 
+  currentScene: []
   randomIndex: 0
   NumberRounds: 2
   currentRound: 1
@@ -1740,6 +1850,7 @@ MonoBehaviour:
   StartButton: {fileID: 46605868}
   SAM: {fileID: 1596946561}
   VAS: {fileID: 979919428}
+  Markers: {fileID: 789354311}
 --- !u!4 &833630556
 Transform:
   m_ObjectHideFlags: 0
@@ -1800,6 +1911,7 @@ Transform:
   m_Children:
   - {fileID: 1596946562}
   - {fileID: 979919427}
+  - {fileID: 789354310}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1814,6 +1926,10 @@ PrefabInstance:
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: StreamID
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: SampleRate
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: StreamName
@@ -2586,6 +2702,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 917266800}
     m_Modifications:
+    - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: SampleRate
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: StreamName
       value: SAM

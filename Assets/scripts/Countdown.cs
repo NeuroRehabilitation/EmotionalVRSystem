@@ -39,12 +39,17 @@ public class Countdown : MonoBehaviour
 
             if (currentTime <= 0 && !TimeController.isFinished)
             {
+                Manager.currentScene.Add("0");
+                Manager.Markers.StreamData(Manager.currentScene.ToArray());
                 StopCountdown();
                 TimeController.StartTimer();
             }
              
             if (currentTime <= 0 && TimeController.isFinished)
             {
+                Manager.currentScene.RemoveAt(Manager.currentScene.Count - 1);
+                Manager.currentScene.Add("1");
+                Manager.Markers.StreamData(Manager.currentScene.ToArray());
                 StopCountdown();
                 SceneManager.LoadScene("SAM");
             }
