@@ -20,7 +20,12 @@ public class SpawnTrees : MonoBehaviour
 IEnumerator StartSpawning()
 {
     yield return new WaitForSeconds(5f);
-    SpawnObject(3);
+    for (int i = 0; i < tree.Length; i++)
+        {
+            if (tree[i] != null)
+                SpawnObject(i);
+        }
+
 }
     public void ToggleDestroy()
     {

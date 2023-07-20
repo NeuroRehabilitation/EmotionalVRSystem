@@ -70,7 +70,7 @@ Material:
     - _NormalMapKwToggle: 0
     - _Occlusion: 0.71428573
     - _ShadowStrength: 1
-    - _Shininess: 0.162
+    - _Shininess: 0.094
     - _SquashAmount: 1
     - _SubsurfaceIndirect: 0.25
     - _SubsurfaceKwToggle: 0
@@ -78,7 +78,7 @@ Material:
     - _TwoSided: 2
     - _WindQuality: 2
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.9528302, g: 0.653198, b: 0.653198, a: 1}
     - _HueVariation: {r: 0.058390804, g: 1, b: 0.0141509175, a: 0.1}
     - _HueVariationColor: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _Scale: {r: 1, g: 1, b: 1, a: 1}

@@ -141,9 +141,9 @@ public class MeshGenerator : MonoBehaviour
         GameObject ScoutPlaced;
         ScoutPlaced = Instantiate (Scout, new Vector3(-130, 150, 1250), Quaternion.identity);
 
-        for (int x=-175;x>-200;x--)
+        for (int x=-50;x>-200;x--)
         {
-            for (int z=-175;z>-200;z--)
+            for (int z=-110;z>-200;z--)
             {
                 ScoutPlaced.transform.position = new Vector3(x,150f,z);
                 ScoutPlaced.GetComponent<ScoutTerrain>().checkIsInWater();
