@@ -131,7 +131,7 @@ public class Manager : MonoBehaviour
         CSV_writer.CloseCSV();
 
         //Comment this line below when you build the project
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
 
         Application.Quit();
     }

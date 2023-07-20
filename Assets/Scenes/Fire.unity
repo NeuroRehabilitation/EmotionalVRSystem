@@ -2790,12 +2790,12 @@ MonoBehaviour:
   SpawnHeight: 115
   parent: {fileID: 1269797001}
   tree:
-  - {fileID: 1824898583809918, guid: e3ee9b4631379bf44b7e076739afa41e, type: 3}
-  - {fileID: 629542536758182806, guid: 7ca2fa2809968cf47852232e5d4a6e43, type: 3}
-  - {fileID: 7291038580486291444, guid: a96ec426591c1a74b90aa643726f600d, type: 3}
-  - {fileID: 2415146313088293920, guid: 0a04c12ab37b34b45bac5513fe3bf44a, type: 3}
+  - {fileID: 4315165430381223245, guid: 19e137d740990f147ba7a3e2b3ad835a, type: 3}
+  - {fileID: 4315165430381223245, guid: 19e137d740990f147ba7a3e2b3ad835a, type: 3}
+  - {fileID: 4315165430381223245, guid: 19e137d740990f147ba7a3e2b3ad835a, type: 3}
+  - {fileID: 4315165430381223245, guid: 19e137d740990f147ba7a3e2b3ad835a, type: 3}
   placedGrass: []
-  numObjectsToSpawn: 30000
+  numObjectsToSpawn: 5000
 --- !u!114 &1242147619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2810,11 +2810,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 1508399535}
   tree:
-  - {fileID: 184848384070053195, guid: 2fd223904192ac54291449108f65fd1f, type: 3}
-  - {fileID: 5142532879768883847, guid: 5983c8a04c0e73047a6c860b9cd9aaad, type: 3}
-  - {fileID: 1276862051916332, guid: 1be61187b5d765449be824463642cb0f, type: 3}
-  - {fileID: 7021152484269114554, guid: 0830e65b246cde043b3773a9c2c2abb8, type: 3}
-  - {fileID: 8610374479441392947, guid: a7e4c2eedff077247ad65a93ad964dad, type: 3}
+  - {fileID: 7021152484269114554, guid: aed0d40f7e4575545abbc1b085888c8d, type: 3}
+  - {fileID: 7021152484269114554, guid: 07af5efff7ae4424bbdaa9ac8a2114d9, type: 3}
+  - {fileID: 1360994071702760, guid: 640e2e58c89e3714881006bd0c5eeabf, type: 3}
   treeScale:
   - 0
   - 0
@@ -2822,7 +2820,7 @@ MonoBehaviour:
   - 0.35
   - 1.19
   placedTrees: []
-  numObjectsToSpawn: 8000
+  numObjectsToSpawn: 2000
   destroy: 1
   m_TextComponent: {fileID: 0}
 --- !u!4 &1242147622
@@ -2894,7 +2892,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1e26faa008672604b980f2df55aa6ed2, type: 2}
+  - {fileID: 2100000, guid: 9be46e22bb51ba642a5f0fe5f9d4a968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4708,7 +4706,7 @@ MonoBehaviour:
   myNavMeshAgent: {fileID: 1738939506}
   waypoints: []
   currentWaypoint: 0
-  grass: {fileID: 2415146313088293920, guid: 0a04c12ab37b34b45bac5513fe3bf44a, type: 3}
+  grass: {fileID: 4315165430381223245, guid: 19e137d740990f147ba7a3e2b3ad835a, type: 3}
   rock: {fileID: 6201417577865561771, guid: 936441e8ad7465e409c2285b778dfd8f, type: 3}
   bush: {fileID: 1064675501975936, guid: b00b4b56eca3251449675f6158e600cf, type: 3}
   grassParent: {fileID: 1269797001}
