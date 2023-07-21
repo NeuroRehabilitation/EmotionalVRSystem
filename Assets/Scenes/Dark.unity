@@ -997,7 +997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5861270974720715672, guid: 35e34a451e52bf14ab9db7c4f5c48b42, type: 3}
       propertyPath: duration
-      value: 0.1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5861270974720715672, guid: 35e34a451e52bf14ab9db7c4f5c48b42, type: 3}
       propertyPath: Countdown
@@ -1718,6 +1718,10 @@ PrefabInstance:
       propertyPath: TimeController
       value: 
       objectReference: {fileID: 298577595}
+    - target: {fileID: 5559871947530617207, guid: 5c1a4b4f71194104daf0439f65134cb2, type: 3}
+      propertyPath: RightHandController
+      value: 
+      objectReference: {fileID: 1543578975}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
