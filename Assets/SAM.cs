@@ -58,6 +58,7 @@ public class SAM : MonoBehaviour
             SAM_Items[currentToggle].SetActive(false);
             currentToggle++;
             SAM_Items[currentToggle].SetActive(true);
+            NextButton.interactable = false;
         }
         else
         {
