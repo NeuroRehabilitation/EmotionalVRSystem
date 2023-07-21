@@ -116,7 +116,7 @@ public class PathCreator : MonoBehaviour
         yield return new WaitForSeconds(secs);
 
         CleanUpScene();
-        SpawnFinalDoor();
+        //SpawnFinalDoor();
 
         gameObject.SetActive(false);
     }

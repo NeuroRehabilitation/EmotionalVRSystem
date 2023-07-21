@@ -1510,7 +1510,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477573727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2425,7 +2425,7 @@ MonoBehaviour:
   m_OriginBaseGameObject: {fileID: 1012857039}
   m_CameraFloorOffsetObject: {fileID: 477573727}
   m_RequestedTrackingOriginMode: 1
-  m_CameraYOffset: 1.9
+  m_CameraYOffset: 2.5
 --- !u!4 &1012857042
 Transform:
   m_ObjectHideFlags: 0
@@ -3683,9 +3683,9 @@ MonoBehaviour:
   - {fileID: 1824898583809918, guid: e3ee9b4631379bf44b7e076739afa41e, type: 3}
   - {fileID: 0}
   - {fileID: 7291038580486291444, guid: a96ec426591c1a74b90aa643726f600d, type: 3}
-  - {fileID: 100578, guid: bd4eef721cfd2af46a5d7c6262bfc4a4, type: 3}
+  - {fileID: 4315165430381223245, guid: 8309b4bda7f8f924d98dc18c35dbf2bd, type: 3}
   placedGrass: []
-  numObjectsToSpawn: 15000
+  numObjectsToSpawn: 1
 --- !u!4 &1242147622
 Transform:
   m_ObjectHideFlags: 0
@@ -3832,7 +3832,7 @@ MonoBehaviour:
   - 0.35
   - 1.19
   placedTrees: []
-  numObjectsToSpawn: 30000
+  numObjectsToSpawn: 15000
   destroy: 1
   m_TextComponent: {fileID: 0}
 --- !u!1 &1248949958 stripped
