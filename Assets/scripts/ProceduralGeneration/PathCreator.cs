@@ -50,12 +50,12 @@ public class PathCreator : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Waypoint") && ShouldDrawPath())
         {
+            Destroy(waypoints[0].gameObject);
+            waypoints.RemoveAt(0);
 
-            if (currentWaypoint < waypoints.Count-1)
+            if (waypoints.Count > 0)
             {
-                currentWaypoint++;
-                myNavMeshAgent.SetDestination(waypoints[currentWaypoint].position);
-                
+                myNavMeshAgent.SetDestination(waypoints[0].position);
             }
         }
 
@@ -82,7 +82,7 @@ public class PathCreator : MonoBehaviour
     {
         if (!myNavMeshAgent.hasPath)
         {
-            myNavMeshAgent.SetDestination(waypoints[currentWaypoint].position);
+            myNavMeshAgent.SetDestination(waypoints[0].position);
         }
 
         if (myNavMeshAgent.path.corners.Length < 2)

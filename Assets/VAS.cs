@@ -62,6 +62,7 @@ public class VAS : MonoBehaviour
             VAS_Items[currentToggle].SetActive(false);
             currentToggle++;
             VAS_Items[currentToggle].SetActive(true);
+            NextButton.interactable = false;
         }
         else
         {
