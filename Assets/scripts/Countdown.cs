@@ -12,6 +12,7 @@ public class Countdown : MonoBehaviour
     private bool isCountdownStarted = false;
 
     public TimeController TimeController;
+    public GameObject RightHandController;
     private Manager Manager;
 
 
@@ -24,6 +25,7 @@ public class Countdown : MonoBehaviour
     private void Start()
     {
         currentTime = countdownTime;
+        RightHandController.SetActive(false);
     }
 
     private void Update()
@@ -35,7 +37,11 @@ public class Countdown : MonoBehaviour
 
             if ( currentTime <= 5f ) { countdownText.text = currentTime.ToString("0"); }
             
-            if (currentTime < 1 && !TimeController.isFinished) { countdownText.text = "Start!"; }
+            if (currentTime < 1 && !TimeController.isFinished) 
+            { 
+                countdownText.text = "Start!";
+                RightHandController.SetActive(true);
+            }
 
             if (currentTime <= 0 && !TimeController.isFinished)
             {
@@ -58,6 +64,7 @@ public class Countdown : MonoBehaviour
         if (!isCountdownStarted && TimeController.isFinished)
         {
             StartCountdown();
+            RightHandController.SetActive(false);
         }
     }
 

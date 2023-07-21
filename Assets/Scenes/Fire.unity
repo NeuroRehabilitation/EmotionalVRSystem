@@ -2486,6 +2486,10 @@ PrefabInstance:
       propertyPath: TimeController
       value: 
       objectReference: {fileID: 420707537}
+    - target: {fileID: 5559871947530617207, guid: 5c1a4b4f71194104daf0439f65134cb2, type: 3}
+      propertyPath: RightHandController
+      value: 
+      objectReference: {fileID: 1543578975}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
