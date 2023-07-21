@@ -58,7 +58,7 @@ IEnumerator StartSpawning()
             RaycastHit hit;
             if (Physics.Raycast(spawnPosition, Vector3.down, out hit))
             {
-                if (hit.transform.gameObject.tag != "water" && hit.transform.gameObject.tag != "Waypoint")
+                if (hit.transform.gameObject.tag != "water" && hit.transform.gameObject.tag != "Waypoint" && hit.transform.gameObject.tag != "grass")
                 {
                     placedTrees[i] = Instantiate(tree[chosen], hit.point, Quaternion.Euler(new Vector3(0, Random.Range(0, 360), 0)), parent.transform);
                     placedTrees[i].gameObject.transform.localScale += new Vector3(treeScale[2], treeScale[2], treeScale[2]);
