@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class PathCreator : MonoBehaviour
 {
@@ -42,6 +43,8 @@ public class PathCreator : MonoBehaviour
 
     public Countdown Countdown;
     private bool countdownStarted = false;
+
+
 
 
     // Destroy grass objects upon collision to keep the path clear
@@ -140,16 +143,14 @@ public class PathCreator : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Update the total time elapsed
-        //UpdateTime();
-        //Debug.Log("Has Path = " + myNavMeshAgent.hasPath);
-       
-     
+
         // Check if the agent should draw the path and update accordingly
         if (ShouldDrawPath())
         {
+
             if (!countdownStarted)
             {
+                
                 countdownStarted = true;
                 Countdown.StartCountdown();
             }
@@ -168,6 +169,8 @@ public class PathCreator : MonoBehaviour
         {
             waypoints.Add(taggedPoint.transform);
         }
+
+       
 
     }
     

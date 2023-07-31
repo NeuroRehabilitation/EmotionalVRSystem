@@ -9,6 +9,7 @@ TagManager:
   - grass
   - FinishPrimary
   - Waypoint
+  - Panel
   layers:
   - Default
   - TransparentFX

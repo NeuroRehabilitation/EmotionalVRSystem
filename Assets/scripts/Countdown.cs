@@ -14,7 +14,7 @@ public class Countdown : MonoBehaviour
     public TimeController TimeController;
     public GameObject RightHandController;
     private Manager Manager;
-
+    GameObject CanvasPanel;
 
 
     private void Awake()
@@ -26,6 +26,7 @@ public class Countdown : MonoBehaviour
     {
         currentTime = countdownTime;
         RightHandController.SetActive(false);
+        CanvasPanel = GameObject.FindGameObjectWithTag("Panel");
     }
 
     private void Update()
@@ -40,11 +41,13 @@ public class Countdown : MonoBehaviour
             if (currentTime < 1 && !TimeController.isFinished) 
             { 
                 countdownText.text = "Start!";
+                
                 RightHandController.SetActive(true);
             }
 
             if (currentTime <= 0 && !TimeController.isFinished)
             {
+                CanvasPanel.GetComponent<Image>().enabled = false;
                 Manager.currentScene.Add("0");
                 Manager.Markers.StreamData(Manager.currentScene.ToArray());
                 StopCountdown();
