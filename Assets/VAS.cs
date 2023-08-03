@@ -70,7 +70,7 @@ public class VAS : MonoBehaviour
             Manager.VAS_answers[currentToggle] = selected.name;
             Manager.VAS.StreamData(answers);
             Manager.WriteData();
-            Manager.CSV_writer.WriteToCSV();
+            //Manager.CSV_writer.WriteToCSV();
             Manager.ChangeScene();
         }
     }
