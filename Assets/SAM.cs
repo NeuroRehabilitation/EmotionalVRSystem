@@ -13,7 +13,7 @@ public class SAM : MonoBehaviour
     [Header("Next Button")]
     public Button NextButton;
 
-    public float[] answers = new float[2];
+    public string[] answers = new string[2];
 
     private int currentToggle = 0;
 
@@ -53,8 +53,11 @@ public class SAM : MonoBehaviour
     {
         if(currentToggle == 0) 
         {
-            answers[currentToggle] = float.Parse(selected.name);
+            //answers[currentToggle] = float.Parse(selected.name);
+            answers[0] = "Valence";
+            answers[1] = selected.name;
             Manager.SAM_answers[currentToggle] = selected.name;
+            Manager.SAM.StreamData(answers);
             SAM_Items[currentToggle].SetActive(false);
             currentToggle++;
             SAM_Items[currentToggle].SetActive(true);
@@ -62,7 +65,9 @@ public class SAM : MonoBehaviour
         }
         else
         {
-            answers[currentToggle] = float.Parse(selected.name);
+            answers[0] = "Arousal";
+            answers[1] = selected.name;
+            //answers[currentToggle] = float.Parse(selected.name);
             Manager.SAM_answers[currentToggle] = selected.name;
             Manager.SAM.StreamData(answers);
             SceneManager.LoadScene("VAS");

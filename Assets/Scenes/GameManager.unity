@@ -1710,7 +1710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: StreamName
-      value: Markers
+      value: PsychoPy Markers
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: StreamType
@@ -2708,11 +2708,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: StreamName
-      value: SAM
+      value: PsychoPy Ratings
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: StreamType
       value: Rating
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: typeStream
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: Channels.Array.size
