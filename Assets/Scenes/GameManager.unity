@@ -1834,7 +1834,7 @@ MonoBehaviour:
   Scenes: 
   currentScene: []
   randomIndex: 0
-  NumberRounds: 2
+  NumberRounds: 1
   currentRound: 1
   CSV_writer: {fileID: 0}
   SAM_answers:
@@ -1933,11 +1933,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: StreamName
-      value: VAS
+      value: PsychoPy VAS
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: StreamType
       value: Rating
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
+      propertyPath: typeStream
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: Channels.Array.size
