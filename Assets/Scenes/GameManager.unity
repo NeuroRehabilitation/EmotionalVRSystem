@@ -1945,15 +1945,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: Channels.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: Channels.Array.data[0]
-      value: Anger
+      value: Scale
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: Channels.Array.data[1]
-      value: Fear
+      value: Value
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: Channels.Array.data[2]
@@ -2728,11 +2728,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: Channels.Array.data[0]
-      value: Valence
+      value: Scale
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524614, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: Channels.Array.data[1]
-      value: Arousal
+      value: Value
       objectReference: {fileID: 0}
     - target: {fileID: 7675007392852524615, guid: 0d75832d969023948bf02aa34fe0670f, type: 3}
       propertyPath: m_RootOrder

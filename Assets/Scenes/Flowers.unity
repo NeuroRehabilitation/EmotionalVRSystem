@@ -4098,12 +4098,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5861270974720715672, guid: 35e34a451e52bf14ab9db7c4f5c48b42, type: 3}
       propertyPath: duration
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5861270974720715672, guid: 35e34a451e52bf14ab9db7c4f5c48b42, type: 3}
       propertyPath: Countdown
       value: 
       objectReference: {fileID: 1225373632}
+    - target: {fileID: 5861270974720715672, guid: 35e34a451e52bf14ab9db7c4f5c48b42, type: 3}
+      propertyPath: isFinished
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8479387290607886994, guid: 35e34a451e52bf14ab9db7c4f5c48b42, type: 3}
       propertyPath: m_Name
       value: Timer

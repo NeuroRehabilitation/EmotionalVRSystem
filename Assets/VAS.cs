@@ -58,9 +58,10 @@ public class VAS : MonoBehaviour
         if(currentToggle < VAS_Items.Length - 1)
         {
             //answers[currentToggle] = float.Parse(selected.name);
-            answers[0] = "VAS";
+            answers[0] = selected.gameObject.transform.parent.name.Split(" ")[0];
             answers[1] = selected.name;
             Manager.VAS_answers[currentToggle] = selected.name;
+            Manager.VAS.StreamData(answers);
             VAS_Items[currentToggle].SetActive(false);
             currentToggle++;
             VAS_Items[currentToggle].SetActive(true);
@@ -69,12 +70,12 @@ public class VAS : MonoBehaviour
         else
         {
             //answers[currentToggle] = float.Parse(selected.name);
-            answers[0] = "VAS";
+            answers[0] = selected.gameObject.transform.parent.name.Split(" ")[0];
             answers[1] = selected.name;
             Manager.VAS_answers[currentToggle] = selected.name;
             Manager.VAS.StreamData(answers);
             Manager.WriteData();
-            //Manager.CSV_writer.WriteToCSV();
+            Manager.CSV_writer.WriteToCSV();
             Manager.ChangeScene();
         }
     }

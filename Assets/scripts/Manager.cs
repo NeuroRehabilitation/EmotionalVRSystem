@@ -128,7 +128,7 @@ public class Manager : MonoBehaviour
 
     public void Quit()
     {
-        CSV_writer.WriteToCSV();
+        //CSV_writer.WriteToCSV();
         CSV_writer.CloseCSV();
 
         //Comment this line below when you build the project

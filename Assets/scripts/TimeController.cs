@@ -7,7 +7,7 @@ public class TimeController : MonoBehaviour
     private float elapsedTime;
     public bool isRunning;
     public bool isFinished = false;
-    public float duration = 0.2f; //duration of experiment in minutes.
+    public float duration = 2f; //duration of experiment in minutes.
 
     public Countdown Countdown;
 
