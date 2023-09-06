@@ -16,7 +16,7 @@ public class VAS : MonoBehaviour
     [Header("Next Button")]
     public Button NextButton;
 
-    public string[] answers = new string[4];
+    public string[] answers = new string[2];
 
     private int currentToggle = 0;
 

@@ -83,8 +83,11 @@ public class LSLStreamer : MonoBehaviour
             }
 
         // You can now use the `streamsample` variable outside the switch statement
-            
-            //Debug.Log(sample);
+            //foreach(var x in sample)
+            //{
+            //    Debug.Log(x);
+            //}
+                
         }
         
         else

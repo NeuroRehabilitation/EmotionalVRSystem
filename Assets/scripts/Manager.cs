@@ -128,6 +128,10 @@ public class Manager : MonoBehaviour
 
     public void Quit()
     {
+        List<string> tempList = new List<string>();
+        tempList.Add("end");
+        tempList.Add("0");
+        Markers.StreamData(tempList.ToArray());
         //CSV_writer.WriteToCSV();
         CSV_writer.CloseCSV();
 
